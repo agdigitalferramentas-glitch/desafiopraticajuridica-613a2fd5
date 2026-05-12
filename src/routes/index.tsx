@@ -58,24 +58,24 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
     setError(null);
     setSubmitting(true);
 
-    const url = WEBHOOK_URL
-      .replace("NAME", encodeURIComponent(name.trim()))
-      .replace("EMAIL", encodeURIComponent(email.trim()))
-      .replace("PHONE", encodeURIComponent(phone.trim()));
+    const payload = {
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone.trim(),
+    };
 
-    // Fire-and-forget: try fetch first, fall back to image pixel.
-    // The webhook is GET and we don't need the response, so any of these
-    // delivery methods is fine — we navigate regardless.
+    // Fire-and-forget JSON POST. Using no-cors keeps the request opaque
+    // (so we can't read the response), but the webhook still receives it.
     try {
-      await fetch(url, { method: "GET", mode: "no-cors", keepalive: true });
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        mode: "no-cors",
+        keepalive: true,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
     } catch {
-      try {
-        const img = new Image();
-        img.referrerPolicy = "no-referrer";
-        img.src = url;
-      } catch {
-        // ignore
-      }
+      // ignore — navigate regardless
     }
 
     setSubmitted(true);
