@@ -316,7 +316,7 @@ function Index() {
               <div className="absolute -bottom-1 left-0 right-0 h-32 bg-gradient-to-t from-[oklch(0.29_0_0)] to-transparent" />
             </div>
           </div>
-          <div>
+          <div className="order-1 lg:order-2">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.93_0.05_245)]">
               Quem ensina
             </span>
