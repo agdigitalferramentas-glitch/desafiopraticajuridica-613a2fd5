@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import obgBg from "@/assets/obg-bg.webp";
 
 export const Route = createFileRoute("/djp0526-obg")({
   component: ThankYouPage,
@@ -29,7 +30,11 @@ const WHATSAPP_URL = "#";
 
 function ThankYouPage() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-hero text-white">
+    <main
+      className="relative min-h-screen overflow-hidden bg-hero bg-cover bg-center bg-no-repeat text-white"
+      style={{ backgroundImage: `url(${obgBg})` }}
+    >
+      <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
       <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.18)] blur-3xl animate-float" />
       <div className="absolute bottom-0 left-0 h-[22rem] w-[22rem] -translate-x-1/3 translate-y-1/3 rounded-full bg-[oklch(0.65_0.19_250/0.12)] blur-3xl" />
 
