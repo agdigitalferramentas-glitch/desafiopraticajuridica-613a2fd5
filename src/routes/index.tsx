@@ -64,6 +64,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
         .replace("PHONE", encodeURIComponent(phone.trim()));
       await fetch(url, { method: "GET", mode: "no-cors" });
       setSubmitted(true);
+      navigate({ to: "/djp0526-obg" });
     } catch (err) {
       setError("Não foi possível enviar. Tente novamente.");
     } finally {
