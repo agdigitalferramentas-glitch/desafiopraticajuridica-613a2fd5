@@ -57,19 +57,30 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
     if (submitting || submitted) return;
     setError(null);
     setSubmitting(true);
+
+    const url = WEBHOOK_URL
+      .replace("NAME", encodeURIComponent(name.trim()))
+      .replace("EMAIL", encodeURIComponent(email.trim()))
+      .replace("PHONE", encodeURIComponent(phone.trim()));
+
+    // Fire-and-forget: try fetch first, fall back to image pixel.
+    // The webhook is GET and we don't need the response, so any of these
+    // delivery methods is fine — we navigate regardless.
     try {
-      const url = WEBHOOK_URL
-        .replace("NAME", encodeURIComponent(name.trim()))
-        .replace("EMAIL", encodeURIComponent(email.trim()))
-        .replace("PHONE", encodeURIComponent(phone.trim()));
-      await fetch(url, { method: "GET", mode: "no-cors" });
-      setSubmitted(true);
-      navigate({ to: "/djp0526-obg" });
-    } catch (err) {
-      setError("Não foi possível enviar. Tente novamente.");
-    } finally {
-      setSubmitting(false);
+      await fetch(url, { method: "GET", mode: "no-cors", keepalive: true });
+    } catch {
+      try {
+        const img = new Image();
+        img.referrerPolicy = "no-referrer";
+        img.src = url;
+      } catch {
+        // ignore
+      }
     }
+
+    setSubmitted(true);
+    setSubmitting(false);
+    navigate({ to: "/djp0526-obg" });
   };
 
   return (
