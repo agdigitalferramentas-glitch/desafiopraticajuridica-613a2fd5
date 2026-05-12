@@ -249,7 +249,7 @@ function Index() {
       </section>
 
       {/* DIAS DO DESAFIO */}
-      <section className="relative bg-[oklch(0.985_0.005_120)] py-24">
+      <section className="relative bg-[#E8EEF4] py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.45_0.20_250)]">
