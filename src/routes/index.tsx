@@ -249,7 +249,7 @@ function Index() {
       </section>
 
       {/* DIAS DO DESAFIO */}
-      <section className="relative bg-[#E8EEF4] py-24">
+      <section className="relative bg-[#E8EEF4] py-10 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.45_0.20_250)]">
@@ -335,7 +335,7 @@ function Index() {
       </section>
 
       {/* PARA QUEM É */}
-      <section className="relative bg-background py-24">
+      <section className="relative bg-background py-10 md:py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.45_0.20_250)]">
@@ -398,7 +398,7 @@ function Index() {
       </section>
 
       {/* THIAGO SOBRAL */}
-      <section className="relative overflow-hidden bg-hero py-24 text-white">
+      <section className="relative overflow-hidden bg-hero py-10 md:py-24 text-white">
         <div className="absolute inset-0 grain opacity-30" />
         <div className="absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-[oklch(0.65_0.19_250/0.12)] blur-3xl" />
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center">
@@ -465,7 +465,7 @@ function Index() {
       </section>
 
       {/* FECHAMENTO */}
-      <section className="relative bg-[oklch(0.985_0.005_120)] py-24">
+      <section className="relative bg-[oklch(0.985_0.005_120)] py-10 md:py-24">
         <div className="mx-auto max-w-5xl px-6">
           <div className="text-center">
             <h2 className="font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
