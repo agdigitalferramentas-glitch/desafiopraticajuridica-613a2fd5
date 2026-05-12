@@ -213,7 +213,7 @@ function Index() {
               nos próximos 5&nbsp;anos?
             </h1>
 
-            <p className="mt-7 max-w-2xl text-sm leading-relaxed text-white/85 text-balance">
+            <p className="mt-7 max-w-2xl text-sm md:text-[20px] leading-relaxed text-white/85 text-balance">
               Em <strong className="text-white">2 dias ao vivo e gratuitos</strong>, você vai aprender
               na prática como estruturar inteligência artificial na sua rotina jurídica — com
               segurança técnica, sem expor dados do cliente e sem depender de ferramentas que
