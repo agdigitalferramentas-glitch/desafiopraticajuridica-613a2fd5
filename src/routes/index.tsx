@@ -104,10 +104,7 @@ function Index() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-[oklch(0.20_0_0/0.55)]" />
-        <div className="absolute inset-0 grain opacity-40" />
         <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.18)] blur-3xl animate-float" />
-        <div className="absolute -bottom-40 -left-20 h-[24rem] w-[24rem] rounded-full bg-[oklch(0.34_0_0/0.6)] blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-10 lg:pt-16">
           <div className="max-w-3xl">
