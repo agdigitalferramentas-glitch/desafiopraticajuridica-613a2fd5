@@ -1,7 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700;800&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -65,7 +65,7 @@
 :root {
   --radius: 0.5rem;
   --font-display: "Lora", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
 
   /* Brand palette — deep editorial green + electric green accent */
   --brand-ink: oklch(0.22 0.05 160);          /* #052e22 */
