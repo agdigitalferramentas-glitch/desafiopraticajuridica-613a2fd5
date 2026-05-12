@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import heroBg from "@/assets/hero-bg.webp";
 import {
   ShieldCheck,
   Calendar,
