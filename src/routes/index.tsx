@@ -34,8 +34,10 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-function LeadForm({ id = "lead" }: { id?: string }) {
+function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
+  const inputCls =
+    "w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent";
   return (
     <form
       id={id}
@@ -45,24 +47,21 @@ function LeadForm({ id = "lead" }: { id?: string }) {
       }}
       className="space-y-3"
     >
-      <input
-        required
-        type="text"
-        placeholder="Seu nome"
-        className="w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
-      />
-      <input
-        required
-        type="email"
-        placeholder="Melhor e-mail"
-        className="w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
-      />
-      <input
-        required
-        type="tel"
-        placeholder="WhatsApp com DDD"
-        className="w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
-      />
+      {inline ? (
+        <>
+          <input required type="text" placeholder="Seu nome" className={inputCls} />
+          <div className="grid gap-3 sm:grid-cols-2">
+            <input required type="email" placeholder="Melhor e-mail" className={inputCls} />
+            <input required type="tel" placeholder="WhatsApp com DDD" className={inputCls} />
+          </div>
+        </>
+      ) : (
+        <>
+          <input required type="text" placeholder="Seu nome" className={inputCls} />
+          <input required type="email" placeholder="Melhor e-mail" className={inputCls} />
+          <input required type="tel" placeholder="WhatsApp com DDD" className={inputCls} />
+        </>
+      )}
       <button
         type="submit"
         className="group relative inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-6 py-4 text-base font-bold uppercase tracking-wide text-[oklch(0.18_0.04_160)] shadow-glow transition-transform hover:-translate-y-0.5 active:translate-y-0"
@@ -77,6 +76,7 @@ function LeadForm({ id = "lead" }: { id?: string }) {
     </form>
   );
 }
+
 
 function CtaButton({ children, href = "#inscricao" }: { children: React.ReactNode; href?: string }) {
   return (
