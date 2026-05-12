@@ -38,7 +38,7 @@ export const Route = createFileRoute("/")({
 });
 
 const WEBHOOK_URL =
-  "https://webhook.sellflux.app/v2/webhook/custom/3eb2e5c90ddc9c4127a0cb655a8349e6?name=NAME&email=EMAIL&phone=PHONE";
+  "https://webhook.sellflux.app/v2/webhook/custom/3eb2e5c90ddc9c4127a0cb655a8349e6";
 
 function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boolean }) {
   const navigate = useNavigate();
@@ -58,24 +58,23 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
     setError(null);
     setSubmitting(true);
 
-    const url = WEBHOOK_URL
-      .replace("NAME", encodeURIComponent(name.trim()))
-      .replace("EMAIL", encodeURIComponent(email.trim()))
-      .replace("PHONE", encodeURIComponent(phone.trim()));
+    const payload = {
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone.trim(),
+    };
 
-    // Fire-and-forget: try fetch first, fall back to image pixel.
-    // The webhook is GET and we don't need the response, so any of these
-    // delivery methods is fine — we navigate regardless.
+    // JSON POST. Fire-and-forget: ignore network/CORS errors and navigate
+    // to the thank-you page regardless.
     try {
-      await fetch(url, { method: "GET", mode: "no-cors", keepalive: true });
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        keepalive: true,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
     } catch {
-      try {
-        const img = new Image();
-        img.referrerPolicy = "no-referrer";
-        img.src = url;
-      } catch {
-        // ignore
-      }
+      // ignore — navigate regardless
     }
 
     setSubmitted(true);
