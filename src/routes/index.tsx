@@ -115,7 +115,7 @@ function Index() {
           </div>
         </nav>
 
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-10 lg:grid-cols-[1.1fr,0.9fr] lg:pt-16">
+        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-10 lg:grid-cols-2 lg:pt-16">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.78_0.22_145/0.4)] bg-[oklch(0.78_0.22_145/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.10_145)]">
               <Sparkles className="h-3.5 w-3.5" />
