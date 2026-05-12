@@ -301,9 +301,9 @@ function Index() {
       <section className="relative overflow-hidden bg-hero py-24 text-white">
         <div className="absolute inset-0 grain opacity-30" />
         <div className="absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-[oklch(0.65_0.19_250/0.12)] blur-3xl" />
-        <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr,1.4fr] lg:items-center">
-          <div className="relative">
-            <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-[oklch(0.34_0_0)] shadow-elegant">
+        <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center">
+          <div className="relative order-2 lg:order-1">
+            <div className="relative mx-auto aspect-[4/5] w-full overflow-hidden rounded-2xl border border-white/10 bg-[oklch(0.34_0_0)] shadow-elegant">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-accent-gradient text-5xl font-display font-normal text-[oklch(0.20_0_0)] shadow-glow animate-pulse-ring">
