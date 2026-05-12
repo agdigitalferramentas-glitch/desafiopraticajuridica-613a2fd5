@@ -479,9 +479,6 @@ function Index() {
               ))}
             </div>
 
-            <div className="mt-9">
-              <CtaButton href="#formulario-inscricao">Finalizar a inscrição gratuita</CtaButton>
-            </div>
           </div>
         </div>
       </section>
