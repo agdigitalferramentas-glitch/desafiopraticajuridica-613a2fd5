@@ -1,5 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
+import { toast } from "sonner";
 import heroBg from "@/assets/hero-bg.webp";
 import heroBgMobile from "@/assets/hero-bg-mobile.webp";
 import thiagoImg from "@/assets/thiago.webp";
@@ -64,22 +65,29 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
       phone: phone.trim(),
     };
 
-    // JSON POST. Fire-and-forget: ignore network/CORS errors and navigate
-    // to the thank-you page regardless.
     try {
-      await fetch(WEBHOOK_URL, {
+      const response = await fetch(WEBHOOK_URL, {
         method: "POST",
         keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
-    } catch {
-      // ignore — navigate regardless
-    }
 
-    setSubmitted(true);
-    setSubmitting(false);
-    navigate({ to: "/djp0526-obg" });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      setSubmitted(true);
+      navigate({ to: "/djp0526-obg" });
+    } catch (err) {
+      console.error("Webhook submission failed:", err);
+      toast.error("Não foi possível enviar sua inscrição", {
+        description:
+          "Verifique sua conexão com a internet e tente novamente em instantes.",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
