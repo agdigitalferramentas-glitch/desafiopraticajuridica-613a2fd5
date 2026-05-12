@@ -121,15 +121,19 @@ function Index() {
               <Sparkles className="h-3.5 w-3.5" />
               Desafio ao vivo · 100% gratuito
             </div>
-            <h1 className="font-display text-4xl md:text-5xl font-normal leading-[1.1] text-balance">
-              Você realmente quer continuar{" "}
+            <h1 className="font-display text-4xl md:text-[2.75rem] lg:text-5xl font-normal leading-[1.15]">
+              Você realmente quer continuar
+              <br />
               <span className="relative inline-block">
                 <span className="relative z-10 italic text-[oklch(0.93_0.10_145)]">
                   peticionando do mesmo jeito
                 </span>
                 <span className="absolute inset-x-0 bottom-1 -z-0 h-3 bg-[oklch(0.78_0.22_145/0.25)]" />
-              </span>{" "}
-              nos próximos 5 anos?
+              </span>
+              <br />
+              nos próximos
+              <br />
+              5 anos?
             </h1>
 
             <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/85 text-balance">
