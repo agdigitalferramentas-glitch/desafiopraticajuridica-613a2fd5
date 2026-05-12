@@ -37,41 +37,119 @@ export const Route = createFileRoute("/")({
   }),
 });
 
+const WEBHOOK_URL =
+  "https://webhook.sellflux.app/v2/webhook/custom/3eb2e5c90ddc9c4127a0cb655a8349e6?name=NAME&email=EMAIL&phone=PHONE";
+
 function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boolean }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
   const inputCls =
     "w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent";
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (submitting || submitted) return;
+    setError(null);
+    setSubmitting(true);
+    try {
+      const url = WEBHOOK_URL
+        .replace("NAME", encodeURIComponent(name.trim()))
+        .replace("EMAIL", encodeURIComponent(email.trim()))
+        .replace("PHONE", encodeURIComponent(phone.trim()));
+      await fetch(url, { method: "GET", mode: "no-cors" });
+      setSubmitted(true);
+    } catch (err) {
+      setError("Não foi possível enviar. Tente novamente.");
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
   return (
-    <form
-      id={id}
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-      className="space-y-3"
-    >
+    <form id={id} onSubmit={handleSubmit} className="space-y-3">
       {inline ? (
         <>
-          <input required type="text" placeholder="Seu nome" className={inputCls} />
+          <input
+            required
+            type="text"
+            placeholder="Seu nome"
+            className={inputCls}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            maxLength={100}
+          />
           <div className="grid gap-3 sm:grid-cols-2">
-            <input required type="email" placeholder="Melhor e-mail" className={inputCls} />
-            <input required type="tel" placeholder="WhatsApp com DDD" className={inputCls} />
+            <input
+              required
+              type="email"
+              placeholder="Melhor e-mail"
+              className={inputCls}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              maxLength={255}
+            />
+            <input
+              required
+              type="tel"
+              placeholder="WhatsApp com DDD"
+              className={inputCls}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              maxLength={20}
+            />
           </div>
         </>
       ) : (
         <>
-          <input required type="text" placeholder="Seu nome" className={inputCls} />
-          <input required type="email" placeholder="Melhor e-mail" className={inputCls} />
-          <input required type="tel" placeholder="WhatsApp com DDD" className={inputCls} />
+          <input
+            required
+            type="text"
+            placeholder="Seu nome"
+            className={inputCls}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            maxLength={100}
+          />
+          <input
+            required
+            type="email"
+            placeholder="Melhor e-mail"
+            className={inputCls}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            maxLength={255}
+          />
+          <input
+            required
+            type="tel"
+            placeholder="WhatsApp com DDD"
+            className={inputCls}
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            maxLength={20}
+          />
         </>
       )}
       <button
         type="submit"
-        className="group relative inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-6 py-4 text-base font-bold uppercase tracking-wide text-white shadow-glow transition-transform hover:-translate-y-0.5 active:translate-y-0"
+        disabled={submitting || submitted}
+        className="group relative inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-6 py-4 text-base font-bold uppercase tracking-wide text-white shadow-glow transition-transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-80"
       >
-        {submitted ? "Vaga garantida ✓" : "Garantir minha vaga gratuita"}
+        {submitted
+          ? "Vaga garantida ✓"
+          : submitting
+            ? "Enviando..."
+            : "Garantir minha vaga gratuita"}
         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
       </button>
+      {error && (
+        <p className="text-center text-xs text-destructive">{error}</p>
+      )}
       <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
         <Lock className="h-3.5 w-3.5" />
         <em>Seus dados estão protegidos. Sem spam.</em>
