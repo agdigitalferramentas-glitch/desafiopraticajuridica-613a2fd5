@@ -122,16 +122,12 @@ function Index() {
               Desafio ao vivo · 100% gratuito
             </div>
             <h1 className="font-display text-4xl md:text-[2.5rem] lg:text-[2.75rem] font-normal leading-[1.2]">
-              Você realmente quer
+              Você realmente
               <br />
-              continuar{" "}
-              <span className="relative inline">
-                <span className="relative z-10 italic text-[oklch(0.93_0.10_145)]">
-                  peticionando
-                  <br className="hidden lg:inline" />{" "}
-                  do mesmo jeito
-                </span>
-              </span>
+              quer continuar{" "}
+              <span className="italic text-[oklch(0.93_0.10_145)]">peticionando</span>
+              <br />
+              <span className="italic text-[oklch(0.93_0.10_145)]">do mesmo jeito</span>
               <br />
               nos próximos 5 anos?
             </h1>
