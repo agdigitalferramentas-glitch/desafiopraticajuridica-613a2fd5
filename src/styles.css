@@ -65,7 +65,7 @@
 :root {
   --radius: 0.5rem;
   --font-display: "Lora", Georgia, serif;
-  --font-sans: "Inter", system-ui, sans-serif;
+  --font-sans: "Montserrat", system-ui, sans-serif;
 
   /* Brand palette — deep editorial green + electric green accent */
   --brand-ink: oklch(0.22 0.05 160);          /* #052e22 */
