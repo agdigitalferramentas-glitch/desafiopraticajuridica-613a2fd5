@@ -545,7 +545,7 @@ function Index() {
               href="https://agwebi.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[oklch(0.65_0.19_30)] hover:underline"
+              className="text-[oklch(0.75_0.15_245)] hover:underline"
             >
               AG WEBi
             </a>
