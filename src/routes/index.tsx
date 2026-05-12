@@ -131,19 +131,16 @@ function Index() {
                 <ShieldCheck className="h-4 w-4 text-[oklch(0.78_0.22_145)]" /> Evento ao vivo
               </span>
             </div>
+          </div>
 
-            <div className="relative mt-10" id="inscricao">
-              <div className="absolute -inset-2 rounded-2xl bg-accent-gradient opacity-30 blur-xl" />
-              <div className="relative rounded-2xl border border-white/15 bg-white/[0.04] p-7 backdrop-blur-xl shadow-elegant">
-                <h2 className="font-display text-2xl font-normal text-white">
-                  Garanta sua vaga gratuita
-                </h2>
-                <p className="mt-1 text-sm text-white/70">
-                  Preencha os campos e receba o link da transmissão.
-                </p>
-                <div className="mt-6 rounded-xl bg-[oklch(0.99_0.003_120)] p-5">
-                  <LeadForm id="lead-hero" inline />
-                </div>
+          <div className="relative mt-10 lg:w-1/2" id="inscricao">
+            <div className="absolute -inset-2 rounded-2xl bg-accent-gradient opacity-30 blur-xl" />
+            <div className="relative rounded-2xl border border-white/15 bg-white/[0.04] p-7 backdrop-blur-xl shadow-elegant">
+              <h2 className="font-display text-2xl font-normal text-white">
+                Garanta sua vaga gratuita
+              </h2>
+              <div className="mt-6 rounded-xl bg-[oklch(0.99_0.003_120)] p-5">
+                <LeadForm id="lead-hero" inline />
               </div>
             </div>
           </div>
