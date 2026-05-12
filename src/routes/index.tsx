@@ -100,7 +100,7 @@ function Index() {
         <div className="absolute -bottom-40 -left-20 h-[24rem] w-[24rem] rounded-full bg-[oklch(0.32_0.07_160/0.6)] blur-3xl" />
 
         <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <div className="flex items-center gap-2 font-display text-lg font-semibold tracking-tight">
+          <div className="flex items-center gap-2 font-display text-lg font-normal tracking-tight">
             <Scale className="h-5 w-5 text-[oklch(0.78_0.22_145)]" />
             <span>Thiago Sobral</span>
             <span className="text-white/40">·</span>
@@ -121,7 +121,7 @@ function Index() {
               <Sparkles className="h-3.5 w-3.5" />
               Desafio ao vivo · 100% gratuito
             </div>
-            <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-semibold leading-[1.05] text-balance">
+            <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-normal leading-[1.05] text-balance">
               Você realmente quer continuar{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 italic text-[oklch(0.93_0.10_145)]">
@@ -155,7 +155,7 @@ function Index() {
           <div className="relative" id="inscricao">
             <div className="absolute -inset-2 rounded-2xl bg-accent-gradient opacity-30 blur-xl" />
             <div className="relative rounded-2xl border border-white/15 bg-white/[0.04] p-7 backdrop-blur-xl shadow-elegant">
-              <h2 className="font-display text-2xl font-semibold text-white">
+              <h2 className="font-display text-2xl font-normal text-white">
                 Garanta sua vaga gratuita
               </h2>
               <p className="mt-1 text-sm text-white/70">
@@ -178,7 +178,7 @@ function Index() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.32_0.07_160)]">
               Programação
             </span>
-            <h2 className="mt-3 font-display text-4xl font-semibold leading-tight text-balance md:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
               O que acontece em cada dia do desafio
             </h2>
           </div>
@@ -188,12 +188,12 @@ function Index() {
             <article className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-elegant transition-transform hover:-translate-y-1">
               <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-accent-gradient opacity-20" />
               <div className="flex items-baseline justify-between">
-                <span className="font-display text-6xl font-semibold text-[oklch(0.22_0.05_160)]">
+                <span className="font-display text-6xl font-normal text-[oklch(0.22_0.05_160)]">
                   01
                 </span>
                 <span className="text-sm font-medium text-muted-foreground">26 de maio · 19:51h</span>
               </div>
-              <h3 className="mt-4 font-display text-2xl font-semibold leading-tight text-balance">
+              <h3 className="mt-4 font-display text-2xl font-normal leading-tight text-balance">
                 Como usar IA para recuperar 20 horas da sua semana sem abrir mão da qualidade
                 técnica
               </h3>
@@ -221,12 +221,12 @@ function Index() {
             <article className="group relative overflow-hidden rounded-2xl border border-border bg-[oklch(0.22_0.05_160)] p-8 text-white shadow-elegant transition-transform hover:-translate-y-1">
               <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-accent-gradient opacity-30" />
               <div className="flex items-baseline justify-between">
-                <span className="font-display text-6xl font-semibold text-[oklch(0.93_0.10_145)]">
+                <span className="font-display text-6xl font-normal text-[oklch(0.93_0.10_145)]">
                   02
                 </span>
                 <span className="text-sm font-medium text-white/70">27 de maio · 19:51h</span>
               </div>
-              <h3 className="mt-4 font-display text-2xl font-semibold leading-tight text-balance">
+              <h3 className="mt-4 font-display text-2xl font-normal leading-tight text-balance">
                 Segurança, ética e estratégia: o que separa o uso amador da prática jurídica de
                 alta performance com IA
               </h3>
@@ -264,7 +264,7 @@ function Index() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.32_0.07_160)]">
               Diagnóstico
             </span>
-            <h2 className="mt-3 font-display text-4xl font-semibold leading-tight text-balance md:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
               Para quem é o<br className="hidden sm:block" />
               <em className="text-[oklch(0.32_0.07_160)]">Desafio Prática Jurídica com IA?</em>
             </h2>
@@ -276,7 +276,7 @@ function Index() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[oklch(0.78_0.22_145)] text-white">
                   <CheckCircle2 className="h-5 w-5" />
                 </div>
-                <h3 className="font-display text-2xl font-semibold">Para quem é este Desafio</h3>
+                <h3 className="font-display text-2xl font-normal">Para quem é este Desafio</h3>
               </div>
               <ul className="mt-6 space-y-4 text-[15px] leading-relaxed">
                 {[
@@ -298,7 +298,7 @@ function Index() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-muted text-muted-foreground">
                   <XCircle className="h-5 w-5" />
                 </div>
-                <h3 className="font-display text-2xl font-semibold">Para quem não é</h3>
+                <h3 className="font-display text-2xl font-normal">Para quem não é</h3>
               </div>
               <ul className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted-foreground">
                 {[
@@ -329,7 +329,7 @@ function Index() {
             <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-[oklch(0.32_0.07_160)] shadow-elegant">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-accent-gradient text-5xl font-display font-bold text-[oklch(0.18_0.04_160)] shadow-glow animate-pulse-ring">
+                  <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-accent-gradient text-5xl font-display font-normal text-[oklch(0.18_0.04_160)] shadow-glow animate-pulse-ring">
                     TS
                   </div>
                   <p className="mt-6 font-display text-xl">Thiago Sobral</p>
@@ -343,7 +343,7 @@ function Index() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.93_0.10_145)]">
               Quem ensina
             </span>
-            <h2 className="mt-3 font-display text-4xl font-semibold leading-tight text-balance md:text-5xl">
+            <h2 className="mt-3 font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
               Quem é <em className="text-[oklch(0.93_0.10_145)]">Thiago Sobral</em>?
             </h2>
             <div className="mt-7 space-y-5 text-[17px] leading-relaxed text-white/85">
@@ -383,7 +383,7 @@ function Index() {
                   className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur"
                 >
                   <Icon className="mx-auto h-5 w-5 text-[oklch(0.78_0.22_145)]" />
-                  <p className="mt-2 font-display text-sm font-semibold">{label}</p>
+                  <p className="mt-2 font-display text-sm font-normal">{label}</p>
                   <p className="text-xs text-white/60">{sub}</p>
                 </div>
               ))}
@@ -400,7 +400,7 @@ function Index() {
       <section className="relative bg-[oklch(0.985_0.005_120)] py-24">
         <div className="mx-auto max-w-5xl px-6">
           <div className="text-center">
-            <h2 className="font-display text-4xl font-semibold leading-tight text-balance md:text-5xl">
+            <h2 className="font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
               Dois dias. Método real.{" "}
               <em className="text-[oklch(0.32_0.07_160)]">Resultado na sua prática.</em>
             </h2>
