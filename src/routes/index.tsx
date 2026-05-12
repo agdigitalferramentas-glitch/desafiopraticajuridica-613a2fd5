@@ -99,7 +99,7 @@ function Index() {
       {/* HERO */}
       <section className="relative overflow-hidden text-white">
         <div
-          className="absolute inset-0 bg-cover bg-top bg-no-repeat md:hidden"
+          className="absolute inset-0 bg-cover bg-bottom bg-no-repeat md:hidden"
           style={{ backgroundImage: `url(${heroBgMobile})` }}
           aria-hidden
         />
