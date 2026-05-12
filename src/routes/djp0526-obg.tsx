@@ -80,7 +80,7 @@ function ThankYouPage() {
         </div>
 
         {/* Benefits card */}
-        <div className="mt-10 w-full max-w-xl rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur sm:p-8">
+        <div className="order-2 mt-10 w-full max-w-xl rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur sm:order-none sm:p-8">
           <p className="font-display text-lg font-normal text-white">
             No grupo de inscritos você recebe:
           </p>
@@ -99,7 +99,7 @@ function ThankYouPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-10 w-full max-w-xl">
+        <div className="order-1 mt-10 w-full max-w-xl sm:order-none">
           <a
             href={WHATSAPP_URL}
             target="_blank"
