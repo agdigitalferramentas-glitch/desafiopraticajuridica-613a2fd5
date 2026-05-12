@@ -96,7 +96,7 @@ function Index() {
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}
       <section
-        className="relative overflow-hidden bg-hero text-white"
+        className="relative overflow-hidden text-white"
         style={{
           backgroundImage: `url(${heroBg})`,
           backgroundSize: "cover",
