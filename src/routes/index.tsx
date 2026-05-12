@@ -471,7 +471,7 @@ function Index() {
             </div>
 
             <div className="mt-9">
-              <CtaButton>Finalizar a inscrição gratuita</CtaButton>
+              <CtaButton href="#formulario-inscricao">Finalizar a inscrição gratuita</CtaButton>
             </div>
           </div>
         </div>
@@ -494,7 +494,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="mx-auto mt-12 max-w-xl">
+          <div id="formulario-inscricao" className="mx-auto mt-12 max-w-xl scroll-mt-8">
             <div className="rounded-2xl border border-border bg-card p-7 shadow-elegant">
               <LeadForm id="lead-final" />
             </div>
