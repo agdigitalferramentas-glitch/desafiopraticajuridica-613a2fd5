@@ -180,9 +180,22 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
 
 
 function CtaButton({ children, href = "#inscricao" }: { children: React.ReactNode; href?: string }) {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const id = href.slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        const input = el.querySelector<HTMLInputElement>("input");
+        input?.focus({ preventScroll: true });
+      }
+    }
+  };
   return (
     <a
       href={href}
+      onClick={handleClick}
       className="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-elegant transition-transform hover:-translate-y-0.5"
     >
       {children}
