@@ -34,8 +34,10 @@ export const Route = createFileRoute("/")({
   }),
 });
 
-function LeadForm({ id = "lead" }: { id?: string }) {
+function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boolean }) {
   const [submitted, setSubmitted] = useState(false);
+  const inputCls =
+    "w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent";
   return (
     <form
       id={id}
@@ -45,24 +47,21 @@ function LeadForm({ id = "lead" }: { id?: string }) {
       }}
       className="space-y-3"
     >
-      <input
-        required
-        type="text"
-        placeholder="Seu nome"
-        className="w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
-      />
-      <input
-        required
-        type="email"
-        placeholder="Melhor e-mail"
-        className="w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
-      />
-      <input
-        required
-        type="tel"
-        placeholder="WhatsApp com DDD"
-        className="w-full rounded-lg border border-border bg-card px-4 py-3.5 text-base text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
-      />
+      {inline ? (
+        <>
+          <input required type="text" placeholder="Seu nome" className={inputCls} />
+          <div className="grid gap-3 sm:grid-cols-2">
+            <input required type="email" placeholder="Melhor e-mail" className={inputCls} />
+            <input required type="tel" placeholder="WhatsApp com DDD" className={inputCls} />
+          </div>
+        </>
+      ) : (
+        <>
+          <input required type="text" placeholder="Seu nome" className={inputCls} />
+          <input required type="email" placeholder="Melhor e-mail" className={inputCls} />
+          <input required type="tel" placeholder="WhatsApp com DDD" className={inputCls} />
+        </>
+      )}
       <button
         type="submit"
         className="group relative inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-6 py-4 text-base font-bold uppercase tracking-wide text-[oklch(0.18_0.04_160)] shadow-glow transition-transform hover:-translate-y-0.5 active:translate-y-0"
@@ -77,6 +76,7 @@ function LeadForm({ id = "lead" }: { id?: string }) {
     </form>
   );
 }
+
 
 function CtaButton({ children, href = "#inscricao" }: { children: React.ReactNode; href?: string }) {
   return (
@@ -99,8 +99,8 @@ function Index() {
         <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.78_0.22_145/0.18)] blur-3xl animate-float" />
         <div className="absolute -bottom-40 -left-20 h-[24rem] w-[24rem] rounded-full bg-[oklch(0.32_0.07_160/0.6)] blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-10 lg:grid-cols-2 lg:pt-16">
-          <div>
+        <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-10 lg:pt-16">
+          <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.78_0.22_145/0.4)] bg-[oklch(0.78_0.22_145/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.10_145)]">
               <Sparkles className="h-3.5 w-3.5" />
               Desafio ao vivo · 100% gratuito
@@ -131,20 +131,18 @@ function Index() {
                 <ShieldCheck className="h-4 w-4 text-[oklch(0.78_0.22_145)]" /> Evento ao vivo
               </span>
             </div>
-          </div>
 
-          <div className="relative" id="inscricao">
-            <div className="absolute -inset-2 rounded-2xl bg-accent-gradient opacity-30 blur-xl" />
-            <div className="relative rounded-2xl border border-white/15 bg-white/[0.04] p-7 backdrop-blur-xl shadow-elegant">
-              <h2 className="font-display text-2xl font-normal text-white">
-                Garanta sua vaga gratuita
-              </h2>
-              <p className="mt-1 text-sm text-white/70">
-                Preencha os campos e receba o link da transmissão.
-              </p>
-              <div className="mt-6">
-                <div className="rounded-xl bg-[oklch(0.99_0.003_120)] p-5">
-                  <LeadForm id="lead-hero" />
+            <div className="relative mt-10" id="inscricao">
+              <div className="absolute -inset-2 rounded-2xl bg-accent-gradient opacity-30 blur-xl" />
+              <div className="relative rounded-2xl border border-white/15 bg-white/[0.04] p-7 backdrop-blur-xl shadow-elegant">
+                <h2 className="font-display text-2xl font-normal text-white">
+                  Garanta sua vaga gratuita
+                </h2>
+                <p className="mt-1 text-sm text-white/70">
+                  Preencha os campos e receba o link da transmissão.
+                </p>
+                <div className="mt-6 rounded-xl bg-[oklch(0.99_0.003_120)] p-5">
+                  <LeadForm id="lead-hero" inline />
                 </div>
               </div>
             </div>
