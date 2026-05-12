@@ -82,8 +82,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
     } catch (err) {
       console.error("Webhook submission failed:", err);
       toast.error("Não foi possível enviar sua inscrição", {
-        description:
-          "Verifique sua conexão com a internet e tente novamente em instantes.",
+        description: "Verifique sua conexão com a internet e tente novamente em instantes.",
       });
     } finally {
       setSubmitting(false);
@@ -167,9 +166,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
             : "Garantir minha vaga gratuita"}
         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
       </button>
-      {error && (
-        <p className="text-center text-xs text-destructive">{error}</p>
-      )}
+      {error && <p className="text-center text-xs text-destructive">{error}</p>}
       <p className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
         <Lock className="h-3.5 w-3.5" />
         <em>Seus dados estão protegidos. Sem spam.</em>
@@ -178,8 +175,13 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
   );
 }
 
-
-function CtaButton({ children, href = "#inscricao" }: { children: React.ReactNode; href?: string }) {
+function CtaButton({
+  children,
+  href = "#inscricao",
+}: {
+  children: React.ReactNode;
+  href?: string;
+}) {
   const className =
     "group relative z-10 inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-elegant transition-transform hover:-translate-y-0.5";
 
@@ -238,14 +240,16 @@ function Index() {
             </div>
             <h1 className="font-display text-[1.7rem] sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem] font-normal leading-[1.15] text-balance">
               Você realmente quer continuar{" "}
-              <span className="italic text-[oklch(0.93_0.05_245)]">peticionando do mesmo jeito</span>{" "}
+              <span className="italic text-[oklch(0.93_0.05_245)]">
+                peticionando do mesmo jeito
+              </span>{" "}
               nos próximos 5&nbsp;anos?
             </h1>
 
             <p className="mt-7 max-w-2xl text-sm md:text-[20px] leading-relaxed text-white/85 text-balance">
-              Em <strong className="text-white">2 dias ao vivo e gratuitos</strong>, você vai aprender
-              na prática como estruturar inteligência artificial na sua rotina jurídica — com
-              segurança técnica, sem expor dados do cliente e sem depender de ferramentas que
+              Em <strong className="text-white">2 dias ao vivo e gratuitos</strong>, você vai
+              aprender na prática como estruturar inteligência artificial na sua rotina jurídica —
+              com segurança técnica, sem expor dados do cliente e sem depender de ferramentas que
               inventam jurisprudência.
             </p>
 
@@ -257,7 +261,8 @@ function Index() {
                 <Clock className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> 19:51h
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <ShieldCheck className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> Evento ao vivo e gratuito
+                <ShieldCheck className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> Evento ao vivo e
+                gratuito
               </span>
             </div>
           </div>
@@ -290,7 +295,9 @@ function Index() {
                 <span className="font-display text-6xl font-normal text-[oklch(0.45_0.20_250)]">
                   01
                 </span>
-                <span className="text-sm font-medium text-muted-foreground">26 de maio · 19:51h</span>
+                <span className="text-sm font-medium text-muted-foreground">
+                  26 de maio · 19:51h
+                </span>
               </div>
               <h3 className="mt-4 font-display text-2xl font-normal leading-tight text-balance">
                 Como usar IA para recuperar 20 horas da sua semana sem abrir mão da qualidade
@@ -299,7 +306,8 @@ function Index() {
               <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
                 Você não está lento. Você está usando a ferramenta errada do jeito errado. A
                 diferença entre o advogado que passa 3 horas numa contestação e o que entrega a
-                mesma peça em 40 minutos não é talento. <strong className="text-foreground">É método.</strong>
+                mesma peça em 40 minutos não é talento.{" "}
+                <strong className="text-foreground">É método.</strong>
               </p>
               <ul className="mt-6 space-y-3 text-[15px]">
                 {[
@@ -326,13 +334,15 @@ function Index() {
                 <span className="text-sm font-medium text-white/70">27 de maio · 19:51h</span>
               </div>
               <h3 className="mt-4 font-display text-2xl font-normal leading-tight text-balance">
-                Segurança, ética e estratégia: o que separa o uso amador da prática jurídica de
-                alta performance com IA
+                Segurança, ética e estratégia: o que separa o uso amador da prática jurídica de alta
+                performance com IA
               </h3>
               <p className="mt-4 text-[15px] leading-relaxed text-white/80">
-                Usar IA no Direito sem método é como assinar uma peça sem ler. O Dia 2 é sobre o
-                que a maioria dos cursos ignora:{" "}
-                <strong className="text-white">como usar IA de forma tecnicamente responsável.</strong>
+                Usar IA no Direito sem método é como assinar uma peça sem ler. O Dia 2 é sobre o que
+                a maioria dos cursos ignora:{" "}
+                <strong className="text-white">
+                  como usar IA de forma tecnicamente responsável.
+                </strong>
               </p>
               <ul className="mt-6 space-y-3 text-[15px]">
                 {[
@@ -382,7 +392,7 @@ function Index() {
                   "Você gasta mais tempo formatando e revisando peças do que pensando na estratégia das causas",
                   "Já tentou usar IA no seu trabalho e ficou inseguro com o resultado",
                   "Sente que escritórios maiores têm uma vantagem tecnológica que você ainda não alcançou",
-                  'Quer usar IA, mas não pode se dar ao luxo de errar com dados ou jurisprudência de cliente',
+                  "Quer usar IA, mas não pode se dar ao luxo de errar com dados ou jurisprudência de cliente",
                 ].map((t) => (
                   <li key={t} className="flex gap-3">
                     <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[oklch(0.55_0.18_250)]" />
