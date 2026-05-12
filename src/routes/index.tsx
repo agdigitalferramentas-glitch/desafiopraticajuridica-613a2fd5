@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import heroBg from "@/assets/hero-bg.webp";
 import heroBgMobile from "@/assets/hero-bg-mobile.webp";
@@ -41,6 +41,7 @@ const WEBHOOK_URL =
   "https://webhook.sellflux.app/v2/webhook/custom/3eb2e5c90ddc9c4127a0cb655a8349e6?name=NAME&email=EMAIL&phone=PHONE";
 
 function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boolean }) {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -63,6 +64,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
         .replace("PHONE", encodeURIComponent(phone.trim()));
       await fetch(url, { method: "GET", mode: "no-cors" });
       setSubmitted(true);
+      navigate({ to: "/djp0526-obg" });
     } catch (err) {
       setError("Não foi possível enviar. Tente novamente.");
     } finally {
