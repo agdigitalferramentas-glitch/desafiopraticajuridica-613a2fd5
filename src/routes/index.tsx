@@ -4,6 +4,7 @@ import { toast } from "sonner";
 import heroBg from "@/assets/hero-bg.webp";
 import heroBgMobile from "@/assets/hero-bg-mobile.webp";
 import thiagoImg from "@/assets/thiago.webp";
+import logoNiu from "@/assets/logo-niu.png";
 import {
   ShieldCheck,
   Calendar,
@@ -530,11 +531,24 @@ function Index() {
         </div>
       </section>
 
-      <footer className="border-t border-border bg-background py-8">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground sm:flex-row">
-          <p>© {new Date().getFullYear()} Thiago Sobral · Todos os direitos reservados.</p>
-          <p className="flex items-center gap-2">
-            <Scale className="h-4 w-4" /> Desafio Prática Jurídica com IA
+      <footer className="bg-[#272727] py-8 text-white">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm sm:flex-row">
+          <div className="flex items-center gap-4">
+            <img src={logoNiu} alt="Niu Cursos" className="h-8 w-auto" />
+            <p className="text-white/90">
+              ©{new Date().getFullYear()} Niu Cursos – Todos os direitos reservados
+            </p>
+          </div>
+          <p className="text-white/90">
+            Desenvolvido por{" "}
+            <a
+              href="https://agwebi.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[oklch(0.65_0.19_30)] hover:underline"
+            >
+              AG WEBi
+            </a>
           </p>
         </div>
       </footer>
