@@ -66,7 +66,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
       )}
       <button
         type="submit"
-        className="group relative inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-6 py-4 text-base font-bold uppercase tracking-wide text-[oklch(0.20_0_0)] shadow-glow transition-transform hover:-translate-y-0.5 active:translate-y-0"
+        className="group relative inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-6 py-4 text-base font-bold uppercase tracking-wide text-white shadow-glow transition-transform hover:-translate-y-0.5 active:translate-y-0"
       >
         {submitted ? "Vaga garantida ✓" : "Garantir minha vaga gratuita"}
         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -84,7 +84,7 @@ function CtaButton({ children, href = "#inscricao" }: { children: React.ReactNod
   return (
     <a
       href={href}
-      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.20_0_0)] shadow-elegant transition-transform hover:-translate-y-0.5"
+      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-elegant transition-transform hover:-translate-y-0.5"
     >
       {children}
       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
