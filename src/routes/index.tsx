@@ -121,7 +121,7 @@ function Index() {
               <Sparkles className="h-3.5 w-3.5" />
               Desafio ao vivo · 100% gratuito
             </div>
-            <h1 className="font-display text-[clamp(2.25rem,5vw,4rem)] font-normal leading-[1.05] text-balance">
+            <h1 className="font-display text-4xl md:text-5xl font-normal leading-[1.1] text-balance">
               Você realmente quer continuar{" "}
               <span className="relative inline-block">
                 <span className="relative z-10 italic text-[oklch(0.93_0.10_145)]">
