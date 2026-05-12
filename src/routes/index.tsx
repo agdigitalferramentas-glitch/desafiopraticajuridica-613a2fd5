@@ -110,7 +110,7 @@ function Index() {
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.65_0.19_250/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.05_245)]">
               <Sparkles className="h-3.5 w-3.5" />
-              Desafio ao vivo · 100% gratuito
+              Desafio Prática Jurídica com IA
             </div>
             <h1 className="font-display text-4xl md:text-[2.5rem] lg:text-[2.75rem] font-normal leading-[1.2]">
               Você realmente quer continuar
