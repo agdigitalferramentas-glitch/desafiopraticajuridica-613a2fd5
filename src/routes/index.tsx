@@ -181,7 +181,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
 
 function CtaButton({ children, href = "#inscricao" }: { children: React.ReactNode; href?: string }) {
   const className =
-    "group inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-elegant transition-transform hover:-translate-y-0.5";
+    "group relative z-10 inline-flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-elegant transition-transform hover:-translate-y-0.5";
 
   const scrollToTarget = (id: string) => {
     const el = document.getElementById(id);
@@ -421,9 +421,9 @@ function Index() {
 
       {/* THIAGO SOBRAL */}
       <section className="relative overflow-hidden bg-hero py-10 md:py-24 text-white">
-        <div className="absolute inset-0 grain opacity-30" />
-        <div className="absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-[oklch(0.65_0.19_250/0.12)] blur-3xl" />
-        <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center">
+        <div className="pointer-events-none absolute inset-0 grain opacity-30" />
+        <div className="pointer-events-none absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-[oklch(0.65_0.19_250/0.12)] blur-3xl" />
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-2 lg:items-center">
           <div className="relative order-1 lg:order-2">
             <div className="relative mx-auto w-full overflow-hidden rounded-2xl border border-white/10 shadow-elegant">
               <img src={thiagoImg} alt="Thiago Sobral" className="block w-full h-auto" />
