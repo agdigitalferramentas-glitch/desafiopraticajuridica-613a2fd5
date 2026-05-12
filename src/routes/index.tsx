@@ -64,12 +64,11 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
       phone: phone.trim(),
     };
 
-    // Fire-and-forget JSON POST. Using no-cors keeps the request opaque
-    // (so we can't read the response), but the webhook still receives it.
+    // JSON POST. Fire-and-forget: ignore network/CORS errors and navigate
+    // to the thank-you page regardless.
     try {
       await fetch(WEBHOOK_URL, {
         method: "POST",
-        mode: "no-cors",
         keepalive: true,
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
