@@ -1,5 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
+import { toast } from "sonner";
 import heroBg from "@/assets/hero-bg.webp";
 import heroBgMobile from "@/assets/hero-bg-mobile.webp";
 import thiagoImg from "@/assets/thiago.webp";
