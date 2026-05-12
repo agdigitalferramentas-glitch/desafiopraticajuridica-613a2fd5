@@ -180,24 +180,33 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
 
 
 function CtaButton({ children, href = "#inscricao" }: { children: React.ReactNode; href?: string }) {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (href.startsWith("#")) {
-      e.preventDefault();
-      const id = href.slice(1);
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth", block: "start" });
-        const input = el.querySelector<HTMLInputElement>("input");
-        input?.focus({ preventScroll: true });
-      }
-    }
+  const className =
+    "group inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-elegant transition-transform hover:-translate-y-0.5";
+
+  const scrollToTarget = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const top = el.getBoundingClientRect().top + window.scrollY - 24;
+    window.scrollTo({ top, behavior: "smooth" });
+
+    window.setTimeout(() => {
+      const input = el.querySelector<HTMLInputElement>("input");
+      input?.focus({ preventScroll: true });
+    }, 450);
   };
+
+  if (href.startsWith("#")) {
+    return (
+      <button type="button" onClick={() => scrollToTarget(href.slice(1))} className={className}>
+        {children}
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+      </button>
+    );
+  }
+
   return (
-    <a
-      href={href}
-      onClick={handleClick}
-      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-elegant transition-transform hover:-translate-y-0.5"
-    >
+    <a href={href} className={className}>
       {children}
       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
     </a>
