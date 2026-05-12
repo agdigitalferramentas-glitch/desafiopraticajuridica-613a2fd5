@@ -135,7 +135,7 @@ function Index() {
                 <Clock className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> 19:51h
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <ShieldCheck className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> Evento ao vivo
+                <ShieldCheck className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> Evento ao vivo e gratuito
               </span>
             </div>
           </div>
