@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import obgBg from "@/assets/obg-bg.webp";
 
 export const Route = createFileRoute("/djp0526-obg")({
   component: ThankYouPage,
