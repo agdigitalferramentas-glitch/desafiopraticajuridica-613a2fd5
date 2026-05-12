@@ -145,7 +145,7 @@ function Index() {
       <section className="relative bg-[oklch(0.985_0.005_120)] py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.34_0_0)]">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.45_0.20_250)]">
               Programação
             </span>
             <h2 className="mt-3 font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
@@ -158,7 +158,7 @@ function Index() {
             <article className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-elegant transition-transform hover:-translate-y-1">
               <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-accent-gradient opacity-20" />
               <div className="flex items-baseline justify-between">
-                <span className="font-display text-6xl font-normal text-[oklch(0.29_0_0)]">
+                <span className="font-display text-6xl font-normal text-[oklch(0.45_0.20_250)]">
                   01
                 </span>
                 <span className="text-sm font-medium text-muted-foreground">26 de maio · 19:51h</span>
@@ -231,12 +231,12 @@ function Index() {
       <section className="relative bg-background py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.34_0_0)]">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.45_0.20_250)]">
               Diagnóstico
             </span>
             <h2 className="mt-3 font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
               Para quem é o<br className="hidden sm:block" />
-              <em className="text-[oklch(0.34_0_0)]">Desafio Prática Jurídica com IA?</em>
+              <em className="text-[oklch(0.45_0.20_250)]">Desafio Prática Jurídica com IA?</em>
             </h2>
           </div>
 
@@ -372,7 +372,7 @@ function Index() {
           <div className="text-center">
             <h2 className="font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
               Dois dias. Método real.{" "}
-              <em className="text-[oklch(0.34_0_0)]">Resultado na sua prática.</em>
+              <em className="text-[oklch(0.45_0.20_250)]">Resultado na sua prática.</em>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-balance">
               Os advogados que aprenderem a usar IA com método e segurança agora não vão disputar os
