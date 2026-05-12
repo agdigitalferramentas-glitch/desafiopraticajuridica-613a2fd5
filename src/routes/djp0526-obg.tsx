@@ -26,7 +26,8 @@ export const Route = createFileRoute("/djp0526-obg")({
   }),
 });
 
-const WHATSAPP_URL = "#";
+const WHATSAPP_URL =
+  "https://chat.whatsapp.com/LNTqg22g5MNHpHwY3cwKS5?name=&nome=&email=&page_code=ipa0526-grupos&funnel=9";
 
 function ThankYouPage() {
   return (
