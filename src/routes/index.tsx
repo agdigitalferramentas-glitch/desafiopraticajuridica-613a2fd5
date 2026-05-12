@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroBg from "@/assets/hero-bg.webp";
+import heroBgMobile from "@/assets/hero-bg-mobile.webp";
 import thiagoImg from "@/assets/thiago.webp";
 import {
   ShieldCheck,
@@ -96,15 +97,17 @@ function Index() {
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}
-      <section
-        className="relative overflow-hidden text-white"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <section className="relative overflow-hidden text-white">
+        <div
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat md:hidden"
+          style={{ backgroundImage: `url(${heroBgMobile})` }}
+          aria-hidden
+        />
+        <div
+          className="absolute inset-0 hidden bg-cover bg-top bg-no-repeat md:block"
+          style={{ backgroundImage: `url(${heroBg})` }}
+          aria-hidden
+        />
         <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.18)] blur-3xl animate-float" />
 
         <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-10 lg:pt-16">
