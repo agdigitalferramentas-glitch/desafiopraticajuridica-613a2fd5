@@ -110,7 +110,7 @@ function Index() {
         />
         <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.18)] blur-3xl animate-float" />
 
-        <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-10 lg:pt-16">
+        <div className="relative mx-auto max-w-7xl px-6 pb-[640px] pt-10 md:pb-24 lg:pt-16">
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.65_0.19_250/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.05_245)]">
               <Sparkles className="h-3.5 w-3.5" />
