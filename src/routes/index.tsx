@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroBg from "@/assets/hero-bg.webp";
+import heroBgMobile from "@/assets/hero-bg-mobile.webp";
 import thiagoImg from "@/assets/thiago.webp";
 import {
   ShieldCheck,
