@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -62,26 +63,43 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.5rem;
+  --font-display: "Lora", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Brand palette — deep editorial green + electric green accent */
+  --brand-ink: oklch(0.22 0.05 160);          /* #052e22 */
+  --brand-deep: oklch(0.32 0.07 160);         /* #0A4D39 */
+  --brand-deep-2: oklch(0.28 0.06 160);       /* #06402a */
+  --brand-green: oklch(0.78 0.22 145);        /* #00c850 */
+  --brand-mint: oklch(0.93 0.10 145);         /* #BEF4C0 */
+  --brand-cream: oklch(0.985 0.005 120);
+  --brand-line: oklch(0.92 0.005 120);
+
+  --gradient-hero: radial-gradient(120% 80% at 80% 0%, oklch(0.32 0.07 160) 0%, oklch(0.22 0.05 160) 60%, oklch(0.18 0.04 160) 100%);
+  --gradient-accent: linear-gradient(135deg, oklch(0.82 0.22 145), oklch(0.72 0.20 150));
+  --shadow-elegant: 0 30px 60px -30px oklch(0.22 0.05 160 / 0.35);
+  --shadow-glow: 0 0 0 1px oklch(0.78 0.22 145 / 0.4), 0 20px 60px -20px oklch(0.78 0.22 145 / 0.45);
+
+  --background: oklch(0.99 0.003 120);
+  --foreground: oklch(0.22 0.05 160);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.22 0.05 160);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(0.22 0.05 160);
+  --primary: oklch(0.22 0.05 160);
+  --primary-foreground: oklch(0.985 0.005 120);
+  --secondary: oklch(0.96 0.02 145);
+  --secondary-foreground: oklch(0.22 0.05 160);
+  --muted: oklch(0.965 0.005 120);
+  --muted-foreground: oklch(0.45 0.02 160);
+  --accent: oklch(0.78 0.22 145);
+  --accent-foreground: oklch(0.18 0.04 160);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.92 0.005 120);
+  --input: oklch(0.94 0.005 120);
+  --ring: oklch(0.78 0.22 145);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -137,8 +155,43 @@
     border-color: var(--color-border);
   }
 
+  html { scroll-behavior: smooth; }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
+
+@layer utilities {
+  .bg-hero { background: var(--gradient-hero); }
+  .bg-accent-gradient { background: var(--gradient-accent); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .text-balance { text-wrap: balance; }
+  .grain {
+    background-image: radial-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float { animation: float-slow 8s ease-in-out infinite; }
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 oklch(0.78 0.22 145 / 0.5); }
+  70% { box-shadow: 0 0 0 18px oklch(0.78 0.22 145 / 0); }
+  100% { box-shadow: 0 0 0 0 oklch(0.78 0.22 145 / 0); }
+}
+.animate-pulse-ring { animation: pulse-ring 2.4s ease-out infinite; }
