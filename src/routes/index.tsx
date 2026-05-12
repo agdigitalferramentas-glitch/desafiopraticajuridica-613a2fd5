@@ -41,6 +41,7 @@ const WEBHOOK_URL =
   "https://webhook.sellflux.app/v2/webhook/custom/3eb2e5c90ddc9c4127a0cb655a8349e6?name=NAME&email=EMAIL&phone=PHONE";
 
 function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boolean }) {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
