@@ -99,22 +99,6 @@ function Index() {
         <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.78_0.22_145/0.18)] blur-3xl animate-float" />
         <div className="absolute -bottom-40 -left-20 h-[24rem] w-[24rem] rounded-full bg-[oklch(0.32_0.07_160/0.6)] blur-3xl" />
 
-        <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <div className="flex items-center gap-2 font-display text-lg font-normal tracking-tight">
-            <Scale className="h-5 w-5 text-[oklch(0.78_0.22_145)]" />
-            <span>Thiago Sobral</span>
-            <span className="text-white/40">·</span>
-            <span className="text-white/70">Faculdade Impacta</span>
-          </div>
-          <div className="hidden items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium text-white/80 backdrop-blur md:flex">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[oklch(0.78_0.22_145)] opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[oklch(0.78_0.22_145)]" />
-            </span>
-            Inscrições abertas · Vagas limitadas
-          </div>
-        </nav>
-
         <div className="relative mx-auto grid max-w-7xl gap-12 px-6 pb-24 pt-10 lg:grid-cols-2 lg:pt-16">
           <div>
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.78_0.22_145/0.4)] bg-[oklch(0.78_0.22_145/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.10_145)]">
