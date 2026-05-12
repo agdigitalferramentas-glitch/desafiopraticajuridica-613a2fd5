@@ -84,8 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Desafio Prática Jurídica | Niu Cursos + Impacta" },
       { name: "twitter:description", content: "Landing page for a legal practice AI challenge, featuring event details and registration." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/t4it5SMiRDY4kDutLXolK11gYPC2/social-images/social-1778612225785-favicon-niu.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/t4it5SMiRDY4kDutLXolK11gYPC2/social-images/social-1778612225785-favicon-niu.webp" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9eb8314f-b5a8-4d6f-a0b7-0c3d0569ff52" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9eb8314f-b5a8-4d6f-a0b7-0c3d0569ff52" },
     ],
     links: [
       {
