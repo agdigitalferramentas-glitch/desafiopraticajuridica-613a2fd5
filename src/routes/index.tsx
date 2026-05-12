@@ -113,11 +113,9 @@ function Index() {
               <Sparkles className="h-3.5 w-3.5" />
               Desafio Prática Jurídica com IA
             </div>
-            <h1 className="font-display text-[1.75rem] sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem] font-normal leading-[1.2]">
-              Você realmente quer continuar
-              <br />
-              <span className="italic text-[oklch(0.93_0.05_245)]">peticionando do mesmo jeito</span>
-              <br />
+            <h1 className="font-display text-2xl sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem] font-normal leading-[1.2] text-balance">
+              Você realmente quer continuar{" "}
+              <span className="italic text-[oklch(0.93_0.05_245)] whitespace-nowrap">peticionando do mesmo jeito</span>{" "}
               nos próximos 5&nbsp;anos?
             </h1>
 
