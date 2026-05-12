@@ -64,7 +64,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
       )}
       <button
         type="submit"
-        className="group relative inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-6 py-4 text-base font-bold uppercase tracking-wide text-[oklch(0.18_0.04_160)] shadow-glow transition-transform hover:-translate-y-0.5 active:translate-y-0"
+        className="group relative inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-6 py-4 text-base font-bold uppercase tracking-wide text-[oklch(0.20_0_0)] shadow-glow transition-transform hover:-translate-y-0.5 active:translate-y-0"
       >
         {submitted ? "Vaga garantida ✓" : "Garantir minha vaga gratuita"}
         <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -82,7 +82,7 @@ function CtaButton({ children, href = "#inscricao" }: { children: React.ReactNod
   return (
     <a
       href={href}
-      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.18_0.04_160)] shadow-elegant transition-transform hover:-translate-y-0.5"
+      className="group inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-[oklch(0.20_0_0)] shadow-elegant transition-transform hover:-translate-y-0.5"
     >
       {children}
       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -96,19 +96,19 @@ function Index() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-hero text-white">
         <div className="absolute inset-0 grain opacity-40" />
-        <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.78_0.22_145/0.18)] blur-3xl animate-float" />
-        <div className="absolute -bottom-40 -left-20 h-[24rem] w-[24rem] rounded-full bg-[oklch(0.32_0.07_160/0.6)] blur-3xl" />
+        <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.18)] blur-3xl animate-float" />
+        <div className="absolute -bottom-40 -left-20 h-[24rem] w-[24rem] rounded-full bg-[oklch(0.34_0_0/0.6)] blur-3xl" />
 
         <div className="relative mx-auto max-w-7xl px-6 pb-24 pt-10 lg:pt-16">
           <div className="max-w-3xl">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.78_0.22_145/0.4)] bg-[oklch(0.78_0.22_145/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.10_145)]">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.65_0.19_250/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.05_245)]">
               <Sparkles className="h-3.5 w-3.5" />
               Desafio ao vivo · 100% gratuito
             </div>
             <h1 className="font-display text-4xl md:text-[2.5rem] lg:text-[2.75rem] font-normal leading-[1.2]">
               Você realmente quer continuar
               <br />
-              <span className="italic text-[oklch(0.93_0.10_145)]">peticionando do mesmo jeito</span>
+              <span className="italic text-[oklch(0.93_0.05_245)]">peticionando do mesmo jeito</span>
               <br />
               nos próximos 5&nbsp;anos?
             </h1>
@@ -122,13 +122,13 @@ function Index() {
 
             <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-white/80">
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <Calendar className="h-4 w-4 text-[oklch(0.78_0.22_145)]" /> 26 e 27 de maio
+                <Calendar className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> 26 e 27 de maio
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <Clock className="h-4 w-4 text-[oklch(0.78_0.22_145)]" /> 19:51h
+                <Clock className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> 19:51h
               </span>
               <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <ShieldCheck className="h-4 w-4 text-[oklch(0.78_0.22_145)]" /> Evento ao vivo
+                <ShieldCheck className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> Evento ao vivo
               </span>
             </div>
           </div>
@@ -145,7 +145,7 @@ function Index() {
       <section className="relative bg-[oklch(0.985_0.005_120)] py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.32_0.07_160)]">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.34_0_0)]">
               Programação
             </span>
             <h2 className="mt-3 font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
@@ -158,7 +158,7 @@ function Index() {
             <article className="group relative overflow-hidden rounded-2xl border border-border bg-card p-8 shadow-elegant transition-transform hover:-translate-y-1">
               <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-accent-gradient opacity-20" />
               <div className="flex items-baseline justify-between">
-                <span className="font-display text-6xl font-normal text-[oklch(0.22_0.05_160)]">
+                <span className="font-display text-6xl font-normal text-[oklch(0.29_0_0)]">
                   01
                 </span>
                 <span className="text-sm font-medium text-muted-foreground">26 de maio · 19:51h</span>
@@ -180,7 +180,7 @@ function Index() {
                   "Demonstração ao vivo: do zero à peça estruturada em tempo real",
                 ].map((t) => (
                   <li key={t} className="flex gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-[oklch(0.55_0.18_145)]" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-[oklch(0.55_0.18_250)]" />
                     <span>{t}</span>
                   </li>
                 ))}
@@ -188,10 +188,10 @@ function Index() {
             </article>
 
             {/* DIA 2 */}
-            <article className="group relative overflow-hidden rounded-2xl border border-border bg-[oklch(0.22_0.05_160)] p-8 text-white shadow-elegant transition-transform hover:-translate-y-1">
+            <article className="group relative overflow-hidden rounded-2xl border border-border bg-[oklch(0.29_0_0)] p-8 text-white shadow-elegant transition-transform hover:-translate-y-1">
               <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[3rem] bg-accent-gradient opacity-30" />
               <div className="flex items-baseline justify-between">
-                <span className="font-display text-6xl font-normal text-[oklch(0.93_0.10_145)]">
+                <span className="font-display text-6xl font-normal text-[oklch(0.93_0.05_245)]">
                   02
                 </span>
                 <span className="text-sm font-medium text-white/70">27 de maio · 19:51h</span>
@@ -213,7 +213,7 @@ function Index() {
                   "Como sair da operação e voltar a ser o estrategista da sua banca",
                 ].map((t) => (
                   <li key={t} className="flex gap-3">
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-[oklch(0.78_0.22_145)]" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-none text-[oklch(0.65_0.19_250)]" />
                     <span className="text-white/90">{t}</span>
                   </li>
                 ))}
@@ -231,19 +231,19 @@ function Index() {
       <section className="relative bg-background py-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.32_0.07_160)]">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.34_0_0)]">
               Diagnóstico
             </span>
             <h2 className="mt-3 font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
               Para quem é o<br className="hidden sm:block" />
-              <em className="text-[oklch(0.32_0.07_160)]">Desafio Prática Jurídica com IA?</em>
+              <em className="text-[oklch(0.34_0_0)]">Desafio Prática Jurídica com IA?</em>
             </h2>
           </div>
 
           <div className="mt-14 grid gap-6 md:grid-cols-2">
-            <div className="rounded-2xl border-2 border-[oklch(0.78_0.22_145/0.3)] bg-[oklch(0.96_0.05_145/0.4)] p-8">
+            <div className="rounded-2xl border-2 border-[oklch(0.65_0.19_250/0.3)] bg-[oklch(0.95_0.05_245/0.4)] p-8">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[oklch(0.78_0.22_145)] text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[oklch(0.65_0.19_250)] text-white">
                   <CheckCircle2 className="h-5 w-5" />
                 </div>
                 <h3 className="font-display text-2xl font-normal">Para quem é este Desafio</h3>
@@ -256,7 +256,7 @@ function Index() {
                   'Quer usar IA, mas não pode se dar ao luxo de errar com dados ou jurisprudência de cliente',
                 ].map((t) => (
                   <li key={t} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[oklch(0.55_0.18_145)]" />
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-[oklch(0.55_0.18_250)]" />
                     <span>{t}</span>
                   </li>
                 ))}
@@ -293,28 +293,28 @@ function Index() {
       {/* THIAGO SOBRAL */}
       <section className="relative overflow-hidden bg-hero py-24 text-white">
         <div className="absolute inset-0 grain opacity-30" />
-        <div className="absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-[oklch(0.78_0.22_145/0.12)] blur-3xl" />
+        <div className="absolute right-0 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-[oklch(0.65_0.19_250/0.12)] blur-3xl" />
         <div className="mx-auto grid max-w-7xl gap-14 px-6 lg:grid-cols-[1fr,1.4fr] lg:items-center">
           <div className="relative">
-            <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-[oklch(0.32_0.07_160)] shadow-elegant">
+            <div className="relative mx-auto aspect-[4/5] max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-[oklch(0.34_0_0)] shadow-elegant">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-accent-gradient text-5xl font-display font-normal text-[oklch(0.18_0.04_160)] shadow-glow animate-pulse-ring">
+                  <div className="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-accent-gradient text-5xl font-display font-normal text-[oklch(0.20_0_0)] shadow-glow animate-pulse-ring">
                     TS
                   </div>
                   <p className="mt-6 font-display text-xl">Thiago Sobral</p>
                   <p className="mt-1 text-sm text-white/60">Direito Digital · IA · OAB-SP</p>
                 </div>
               </div>
-              <div className="absolute -bottom-1 left-0 right-0 h-32 bg-gradient-to-t from-[oklch(0.22_0.05_160)] to-transparent" />
+              <div className="absolute -bottom-1 left-0 right-0 h-32 bg-gradient-to-t from-[oklch(0.29_0_0)] to-transparent" />
             </div>
           </div>
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.93_0.10_145)]">
+            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.93_0.05_245)]">
               Quem ensina
             </span>
             <h2 className="mt-3 font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
-              Quem é <em className="text-[oklch(0.93_0.10_145)]">Thiago Sobral</em>?
+              Quem é <em className="text-[oklch(0.93_0.05_245)]">Thiago Sobral</em>?
             </h2>
             <div className="mt-7 space-y-5 text-[17px] leading-relaxed text-white/85">
               <p>
@@ -329,7 +329,7 @@ function Index() {
                 Sua especialidade é pegar o que as grandes organizações fazem com IA e traduzir para
                 ambientes que exigem precisão, segurança e responsabilidade técnica.
               </p>
-              <p className="text-[oklch(0.93_0.10_145)] font-display italic text-xl">
+              <p className="text-[oklch(0.93_0.05_245)] font-display italic text-xl">
                 Exatamente o que o Direito exige.
               </p>
               <p>
@@ -352,7 +352,7 @@ function Index() {
                   key={label}
                   className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur"
                 >
-                  <Icon className="mx-auto h-5 w-5 text-[oklch(0.78_0.22_145)]" />
+                  <Icon className="mx-auto h-5 w-5 text-[oklch(0.65_0.19_250)]" />
                   <p className="mt-2 font-display text-sm font-normal">{label}</p>
                   <p className="text-xs text-white/60">{sub}</p>
                 </div>
@@ -372,7 +372,7 @@ function Index() {
           <div className="text-center">
             <h2 className="font-display text-4xl font-normal leading-tight text-balance md:text-5xl">
               Dois dias. Método real.{" "}
-              <em className="text-[oklch(0.32_0.07_160)]">Resultado na sua prática.</em>
+              <em className="text-[oklch(0.34_0_0)]">Resultado na sua prática.</em>
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-balance">
               Os advogados que aprenderem a usar IA com método e segurança agora não vão disputar os
