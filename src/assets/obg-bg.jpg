@@ -1,0 +1,1 @@
+{"type":"unauthorized","message":"Missing API key. Provide via Lovable-API-Key header or Authorization: Bearer token.","details":"","props":{"source":"connectors_gateway"}}
