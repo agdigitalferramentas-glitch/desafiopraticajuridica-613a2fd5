@@ -532,8 +532,8 @@ function Index() {
       </section>
 
       <footer className="bg-[#272727] py-8 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm sm:flex-row">
-          <div className="flex items-center gap-4">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-center text-sm sm:flex-row sm:text-left">
+          <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
             <img src={logoNiu} alt="Niu Cursos" className="h-8 w-auto" />
             <p className="text-white/90">
               ©{new Date().getFullYear()} Niu Cursos – Todos os direitos reservados
