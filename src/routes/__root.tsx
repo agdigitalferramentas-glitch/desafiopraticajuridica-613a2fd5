@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Desafio Prática Jurídica | Niu Cursos + Impacta" },
+      { name: "description", content: "Landing page for a legal practice AI challenge, featuring event details and registration." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Desafio Prática Jurídica | Niu Cursos + Impacta" },
+      { property: "og:description", content: "Landing page for a legal practice AI challenge, featuring event details and registration." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Desafio Prática Jurídica | Niu Cursos + Impacta" },
+      { name: "twitter:description", content: "Landing page for a legal practice AI challenge, featuring event details and registration." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/t4it5SMiRDY4kDutLXolK11gYPC2/social-images/social-1778612225785-favicon-niu.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/t4it5SMiRDY4kDutLXolK11gYPC2/social-images/social-1778612225785-favicon-niu.webp" },
     ],
     links: [
       {
