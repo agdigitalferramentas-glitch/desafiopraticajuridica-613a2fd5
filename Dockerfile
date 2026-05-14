@@ -12,11 +12,8 @@ RUN npm install --legacy-peer-deps
 # Copia o resto do projeto
 COPY . .
 
-# Build do TanStack Start (gera dist/client + dist/server worker)
+# Build do TanStack Start + prerender + cópia estática para dist/
 RUN npm run build
-
-# Prerender: sobe o worker SSR localmente e captura o HTML de cada rota
-RUN node scripts/prerender.mjs
 
 # =========================
 # Stage 2: Nginx estático
@@ -30,7 +27,7 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copia HTML prerenderizado + assets (CSS, JS, imagens)
-COPY --from=builder /app/dist/client /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 EXPOSE 80
 

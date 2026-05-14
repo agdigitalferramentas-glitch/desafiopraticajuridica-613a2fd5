@@ -6,9 +6,8 @@ cmds = ["npm install --legacy-peer-deps"]
 
 [phases.build]
 cmds = [
-  "npm run build",
-  "node scripts/prerender.mjs"
+  "npm run build"
 ]
 
 [start]
-cmd = "npx -y serve@latest -s dist/client -l tcp://0.0.0.0:${PORT:-3000}"
+cmd = "npx -y serve@latest -s dist -l tcp://0.0.0.0:${PORT:-3000}"
