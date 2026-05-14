@@ -16,14 +16,5 @@ export default defineConfig({
   },
   tanstackStart: {
     server: { entry: "server" },
-    prerender: {
-      enabled: true,
-      crawlLinks: true,
-      routes: ["/", "/djp0526-obg"],
-    },
-    pages: [
-      { path: "/", prerender: { enabled: true } },
-      { path: "/djp0526-obg", prerender: { enabled: true } },
-    ],
   },
 });
