@@ -532,14 +532,14 @@ function Index() {
       </section>
 
       <footer className="bg-[#272727] py-8 text-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-center text-sm sm:flex-row sm:text-left">
-          <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-4">
-            <img src={logoNiu} alt="Niu Cursos" className="h-8 w-auto" />
-            <p className="text-white/90">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-4 text-center text-xs sm:flex-row sm:gap-4 sm:px-6 sm:text-left sm:text-sm">
+          <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
+            <img src={logoNiu} alt="Niu Cursos" className="h-6 w-auto sm:h-8" />
+            <p className="text-white/90 leading-snug">
               ©{new Date().getFullYear()} Niu Cursos – Todos os direitos reservados
             </p>
           </div>
-          <p className="text-white/90">
+          <p className="text-white/90 leading-snug">
             Desenvolvido por{" "}
             <a
               href="https://agwebi.com.br/"
