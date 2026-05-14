@@ -24,6 +24,15 @@ export const Route = createFileRoute("/djp0526-obg")({
       },
     ],
   }),
+  scripts: () => [
+    {
+      src: "https://iwrrijemxtudyakmhajk.supabase.co/functions/v1/tracking-pixel?pid=4a4c2aff-3657-4ed9-8e36-f11a6d70db12&track=all",
+    },
+    {
+      children:
+        "window.addEventListener('load',function(){window.AGMetrics&&window.AGMetrics.track('thank_you_page',{page:window.location.pathname,referrer:document.referrer});});",
+    },
+  ],
 });
 
 const WHATSAPP_URL =
