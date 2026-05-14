@@ -8,4 +8,4 @@ cmds = ["npm install --legacy-peer-deps"]
 cmds = ["npm run build"]
 
 [start]
-cmd = "sh -c 'if [ -f dist/server/server.js ]; then npx -y srvx@latest --prod -s dist/client dist/server/server.js --port ${PORT:-3000} --host 0.0.0.0; elif [ -f dist/client/index.html ]; then npx -y serve@latest -s dist/client -l tcp://0.0.0.0:${PORT:-3000}; else npx -y serve@latest -s dist -l tcp://0.0.0.0:${PORT:-3000}; fi'"
+cmd = "sh -c 'if [ -f dist/client/index.html ]; then npx -y serve@latest -s dist/client -l tcp://0.0.0.0:${PORT:-3000}; elif [ -f dist/server/server.js ]; then PORT=${PORT:-3000} HOST=0.0.0.0 node dist/server/server.js; elif [ -f dist/index.html ]; then npx -y serve@latest -s dist -l tcp://0.0.0.0:${PORT:-3000}; else npx -y serve@latest -s dist -l tcp://0.0.0.0:${PORT:-3000}; fi'"
