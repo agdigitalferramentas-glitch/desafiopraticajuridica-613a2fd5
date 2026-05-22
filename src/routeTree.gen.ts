@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Djp0526ObgRouteImport } from './routes/djp0526-obg'
+import { Route as AdvIaRouteImport } from './routes/adv-ia'
 import { Route as IndexRouteImport } from './routes/index'
 
 const Djp0526ObgRoute = Djp0526ObgRouteImport.update({
   id: '/djp0526-obg',
   path: '/djp0526-obg',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdvIaRoute = AdvIaRouteImport.update({
+  id: '/adv-ia',
+  path: '/adv-ia',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/adv-ia': typeof AdvIaRoute
   '/djp0526-obg': typeof Djp0526ObgRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/adv-ia': typeof AdvIaRoute
   '/djp0526-obg': typeof Djp0526ObgRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/adv-ia': typeof AdvIaRoute
   '/djp0526-obg': typeof Djp0526ObgRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/djp0526-obg'
+  fullPaths: '/' | '/adv-ia' | '/djp0526-obg'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/djp0526-obg'
-  id: '__root__' | '/' | '/djp0526-obg'
+  to: '/' | '/adv-ia' | '/djp0526-obg'
+  id: '__root__' | '/' | '/adv-ia' | '/djp0526-obg'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdvIaRoute: typeof AdvIaRoute
   Djp0526ObgRoute: typeof Djp0526ObgRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/djp0526-obg'
       fullPath: '/djp0526-obg'
       preLoaderRoute: typeof Djp0526ObgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/adv-ia': {
+      id: '/adv-ia'
+      path: '/adv-ia'
+      fullPath: '/adv-ia'
+      preLoaderRoute: typeof AdvIaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdvIaRoute: AdvIaRoute,
   Djp0526ObgRoute: Djp0526ObgRoute,
 }
 export const routeTree = rootRouteImport
