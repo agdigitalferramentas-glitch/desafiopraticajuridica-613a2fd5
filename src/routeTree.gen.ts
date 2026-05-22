@@ -10,12 +10,18 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Djp0526ObgRouteImport } from './routes/djp0526-obg'
+import { Route as DesignSystemRouteImport } from './routes/design-system'
 import { Route as AdvIaRouteImport } from './routes/adv-ia'
 import { Route as IndexRouteImport } from './routes/index'
 
 const Djp0526ObgRoute = Djp0526ObgRouteImport.update({
   id: '/djp0526-obg',
   path: '/djp0526-obg',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DesignSystemRoute = DesignSystemRouteImport.update({
+  id: '/design-system',
+  path: '/design-system',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AdvIaRoute = AdvIaRouteImport.update({
@@ -32,30 +38,34 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/adv-ia': typeof AdvIaRoute
+  '/design-system': typeof DesignSystemRoute
   '/djp0526-obg': typeof Djp0526ObgRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/adv-ia': typeof AdvIaRoute
+  '/design-system': typeof DesignSystemRoute
   '/djp0526-obg': typeof Djp0526ObgRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/adv-ia': typeof AdvIaRoute
+  '/design-system': typeof DesignSystemRoute
   '/djp0526-obg': typeof Djp0526ObgRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/adv-ia' | '/djp0526-obg'
+  fullPaths: '/' | '/adv-ia' | '/design-system' | '/djp0526-obg'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/adv-ia' | '/djp0526-obg'
-  id: '__root__' | '/' | '/adv-ia' | '/djp0526-obg'
+  to: '/' | '/adv-ia' | '/design-system' | '/djp0526-obg'
+  id: '__root__' | '/' | '/adv-ia' | '/design-system' | '/djp0526-obg'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AdvIaRoute: typeof AdvIaRoute
+  DesignSystemRoute: typeof DesignSystemRoute
   Djp0526ObgRoute: typeof Djp0526ObgRoute
 }
 
@@ -66,6 +76,13 @@ declare module '@tanstack/react-router' {
       path: '/djp0526-obg'
       fullPath: '/djp0526-obg'
       preLoaderRoute: typeof Djp0526ObgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/design-system': {
+      id: '/design-system'
+      path: '/design-system'
+      fullPath: '/design-system'
+      preLoaderRoute: typeof DesignSystemRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/adv-ia': {
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdvIaRoute: AdvIaRoute,
+  DesignSystemRoute: DesignSystemRoute,
   Djp0526ObgRoute: Djp0526ObgRoute,
 }
 export const routeTree = rootRouteImport
