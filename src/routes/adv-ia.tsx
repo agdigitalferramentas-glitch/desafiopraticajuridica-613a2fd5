@@ -147,18 +147,18 @@ function AdvIa() {
               ADV-IA · Formação prática
             </div>
 
-            <p className="font-display text-lg font-normal italic leading-snug text-[oklch(0.93_0.05_245)] md:text-xl lg:text-2xl">
-              Essa distância cresce a cada semana.
-            </p>
-
-            <h1 className="mt-5 font-display text-[1.7rem] font-normal leading-[1.15] text-balance sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem]">
+            <h1 className="font-display text-[1.7rem] font-normal leading-[1.15] text-balance sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem]">
               O advogado do escritório ao lado já usa IA.{" "}
               <span className="italic text-[oklch(0.93_0.05_245)]">
                 Você ainda está formatando petição manualmente.
               </span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-sm leading-relaxed text-white/85 text-balance md:text-[20px]">
+            <p className="mt-5 font-display text-lg font-normal italic leading-snug text-[oklch(0.93_0.05_245)] md:text-xl lg:text-2xl">
+              Essa distância cresce a cada semana.
+            </p>
+
+            <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/85 text-balance md:text-[20px]">
               São{" "}
               <strong className="text-white">32 aulas práticas</strong> e{" "}
               <strong className="text-white">15 horas de formação</strong> para dominar
