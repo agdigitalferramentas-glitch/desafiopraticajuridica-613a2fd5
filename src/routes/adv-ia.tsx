@@ -175,18 +175,6 @@ function AdvIa() {
               ))}
             </ul>
 
-            <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-white/80">
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <Clock className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> 15h de formação
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <BookOpen className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> 4 módulos · 32 aulas
-              </span>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
-                <ShieldCheck className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> Garantia de 7 dias
-              </span>
-            </div>
-
             <div className="relative mt-10 lg:w-1/2">
               <CTA className="w-full">Quero produzir mais em menos tempo</CTA>
             </div>
