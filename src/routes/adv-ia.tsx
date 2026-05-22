@@ -133,29 +133,28 @@ function AdvIa() {
           style={{ backgroundImage: `url(${heroBg})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 bg-[oklch(0.18_0_0/0.78)]" aria-hidden />
-        <div className="pointer-events-none absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.25)] blur-3xl animate-float" />
+        <div className="pointer-events-none absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.18)] blur-3xl animate-float" />
 
-        <div className="relative mx-auto max-w-5xl px-6 py-20 md:py-28 lg:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 pb-[480px] pt-10 md:pb-24 lg:pt-16">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mx-auto max-w-4xl text-center"
+            className="max-w-3xl"
           >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.65_0.19_250/0.5)] bg-[oklch(0.65_0.19_250/0.12)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.05_245)]">
+            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.65_0.19_250/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.05_245)]">
               <Sparkles className="h-3.5 w-3.5" />
               ADV-IA · Formação prática
             </div>
 
-            <h1 className="font-display text-[2rem] font-normal leading-[1.1] text-balance sm:text-4xl md:text-5xl lg:text-[3.5rem]">
+            <h1 className="font-display text-[1.7rem] font-normal leading-[1.15] text-balance sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem]">
               O advogado do escritório ao lado já usa IA.{" "}
               <span className="italic text-[oklch(0.93_0.05_245)]">
                 Você ainda está formatando petição manualmente.
               </span>
             </h1>
 
-            <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-white/85 md:text-lg">
+            <p className="mt-7 max-w-2xl text-sm leading-relaxed text-white/85 text-balance md:text-[20px]">
               Essa distância cresce a cada semana. São{" "}
               <strong className="text-white">32 aulas práticas</strong> e{" "}
               <strong className="text-white">15 horas de formação</strong> para dominar
@@ -163,7 +162,7 @@ function AdvIa() {
               dos seus próprios agentes de IA.
             </p>
 
-            <ul className="mx-auto mt-7 flex max-w-2xl flex-col items-start gap-2 text-left text-sm text-white/85 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-6 sm:gap-y-2 sm:text-[15px]">
+            <ul className="mt-7 flex max-w-2xl flex-col items-start gap-2 text-left text-sm text-white/85 sm:flex-row sm:flex-wrap sm:gap-x-6 sm:gap-y-2 sm:text-[15px]">
               {[
                 "Sem expor dados do cliente.",
                 "Sem jurisprudência inventada.",
@@ -176,19 +175,20 @@ function AdvIa() {
               ))}
             </ul>
 
-            <div className="mt-10 flex flex-col items-center gap-4">
-              <CTA>Quero produzir mais em menos tempo</CTA>
-              <div className="flex flex-wrap items-center justify-center gap-3 text-xs text-white/70">
-                <span className="inline-flex items-center gap-1.5">
-                  <Clock className="h-3.5 w-3.5" /> 15h de formação
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <BookOpen className="h-3.5 w-3.5" /> 4 módulos · 32 aulas
-                </span>
-                <span className="inline-flex items-center gap-1.5">
-                  <ShieldCheck className="h-3.5 w-3.5" /> Garantia de 7 dias
-                </span>
-              </div>
+            <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-white/80">
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
+                <Clock className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> 15h de formação
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
+                <BookOpen className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> 4 módulos · 32 aulas
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1.5 ring-1 ring-white/10">
+                <ShieldCheck className="h-4 w-4 text-[oklch(0.65_0.19_250)]" /> Garantia de 7 dias
+              </span>
+            </div>
+
+            <div className="relative mt-10 lg:w-1/2">
+              <CTA className="w-full">Quero produzir mais em menos tempo</CTA>
             </div>
           </motion.div>
         </div>
