@@ -130,15 +130,15 @@ function DesignSystemPage() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
-      <header className="bg-hero text-[oklch(0.985_0.003_250)] grain">
+      <header className="bg-background border-b border-border">
         <div className="max-w-6xl mx-auto px-6 py-20">
-          <Badge className="bg-white/10 text-white border-white/10 hover:bg-white/10">
+          <Badge variant="secondary" className="text-foreground">
             <Sparkles className="mr-1" /> Design System
           </Badge>
-          <h1 className="font-display text-4xl md:text-6xl mt-6 max-w-3xl">
+          <h1 className="font-display text-4xl md:text-6xl mt-6 max-w-3xl text-foreground">
             Tokens, tipografia e componentes do projeto
           </h1>
-          <p className="mt-4 max-w-2xl text-white/70">
+          <p className="mt-4 max-w-2xl text-muted-foreground">
             Referência viva do design system: cores semânticas, paleta de marca, tipografia Lora + Montserrat,
             espaçamentos, raios, sombras e os componentes shadcn em uso.
           </p>
@@ -156,7 +156,7 @@ function DesignSystemPage() {
               <a
                 key={href}
                 href={href}
-                className="rounded-full border border-white/15 px-3 py-1 text-white/80 hover:bg-white/10 transition"
+                className="rounded-full border border-border px-3 py-1 text-muted-foreground hover:bg-muted transition"
               >
                 {label}
               </a>
