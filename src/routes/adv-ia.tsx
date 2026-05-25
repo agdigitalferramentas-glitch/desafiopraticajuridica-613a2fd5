@@ -718,7 +718,7 @@ export default function AdvIa() {
               <span className="line-through decoration-white/40">De R$ 1.997,00</span> por apenas:
             </p>
             <p className="mt-4 font-display text-5xl font-normal leading-none text-white md:text-6xl">
-              12x de R$ 49<span className="text-3xl md:text-4xl">,70</span>
+              12x de R$ 51<span className="text-3xl md:text-4xl">,40</span>
             </p>
             <p className="mt-3 text-lg text-white/85">
               ou <strong className="text-white">R$ 497,00</strong> à vista
@@ -879,7 +879,7 @@ export default function AdvIa() {
               <span className="line-through decoration-white/40">De R$ 1.997,00</span> por apenas:
             </p>
             <p className="mt-3 font-display text-5xl font-normal leading-none md:text-6xl">
-              12x de R$ 49<span className="text-3xl md:text-4xl">,70</span>
+              12x de R$ 51<span className="text-3xl md:text-4xl">,40</span>
             </p>
             <p className="mt-2 text-lg text-white/85">
               ou <strong className="text-white">R$ 497,00</strong> à vista
