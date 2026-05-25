@@ -1,10 +1,11 @@
-import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { toast } from "sonner";
 import heroBg from "@/assets/hero-bg.webp";
 import heroBgMobile from "@/assets/hero-bg-mobile.webp";
 import thiagoImg from "@/assets/thiago.webp";
 import logoNiu from "@/assets/logo-niu.png";
+import { usePageMeta } from "@/lib/page-meta";
 import {
   ShieldCheck,
   Calendar,
@@ -18,31 +19,6 @@ import {
   Brain,
   Zap,
 } from "lucide-react";
-
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "Desafio Prática Jurídica com IA — Thiago Sobral" },
-      {
-        name: "description",
-        content:
-          "2 dias ao vivo e gratuitos para advogados: aprenda a estruturar IA na sua rotina jurídica com segurança técnica. 26 e 27 de maio.",
-      },
-      { property: "og:title", content: "Desafio Prática Jurídica com IA" },
-      {
-        property: "og:description",
-        content:
-          "Você realmente quer continuar peticionando do mesmo jeito nos próximos 5 anos? Evento gratuito ao vivo com Thiago Sobral.",
-      },
-    ],
-  }),
-  scripts: () => [
-    {
-      src: "https://iwrrijemxtudyakmhajk.supabase.co/functions/v1/tracking-pixel?pid=4a4c2aff-3657-4ed9-8e36-f11a6d70db12&track=all",
-    },
-  ],
-});
 
 const WEBHOOK_URL =
   "https://webhook.sellflux.app/v2/webhook/custom/3eb2e5c90ddc9c4127a0cb655a8349e6";
@@ -84,7 +60,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
       }
 
       setSubmitted(true);
-      navigate({ to: "/djp0526-obg" });
+      navigate("/djp0526-obg");
     } catch (err) {
       console.error("Webhook submission failed:", err);
       toast.error("Não foi possível enviar sua inscrição", {
@@ -221,7 +197,28 @@ function CtaButton({
   );
 }
 
-function Index() {
+export default function Index() {
+  usePageMeta({
+    title: "Desafio Prática Jurídica com IA — Thiago Sobral",
+    meta: [
+      {
+        name: "description",
+        content:
+          "2 dias ao vivo e gratuitos para advogados: aprenda a estruturar IA na sua rotina jurídica com segurança técnica. 26 e 27 de maio.",
+      },
+      { property: "og:title", content: "Desafio Prática Jurídica com IA" },
+      {
+        property: "og:description",
+        content:
+          "Você realmente quer continuar peticionando do mesmo jeito nos próximos 5 anos? Evento gratuito ao vivo com Thiago Sobral.",
+      },
+    ],
+    scripts: [
+      {
+        src: "https://iwrrijemxtudyakmhajk.supabase.co/functions/v1/tracking-pixel?pid=4a4c2aff-3657-4ed9-8e36-f11a6d70db12&track=all",
+      },
+    ],
+  });
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}

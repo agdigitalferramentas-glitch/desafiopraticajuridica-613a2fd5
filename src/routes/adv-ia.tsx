@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -24,26 +23,7 @@ import heroBg from "@/assets/bg-1-vendas-advia-mobile.webp";
 import heroBgDesktop from "@/assets/bg-1-vendas-advia-desktop.webp";
 import logoNiu from "@/assets/logo-niu.png";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
-
-export const Route = createFileRoute("/adv-ia")({
-  component: AdvIa,
-  head: () => ({
-    meta: [
-      { title: "ADV-IA — Inteligência Artificial aplicada ao Direito | Thiago Sobral" },
-      {
-        name: "description",
-        content:
-          "32 aulas e 15 horas de formação prática em IA para advogados. Engenharia de prompts, agentes de IA e protocolos de segurança. Sem precisar saber programar.",
-      },
-      { property: "og:title", content: "ADV-IA — IA aplicada ao Direito" },
-      {
-        property: "og:description",
-        content:
-          "Domine IA no Direito: 32 aulas práticas, frameworks PTF, CIPFE e PTLFPRCD, agentes de IA personalizados. Sem expor dados, sem jurisprudência inventada.",
-      },
-    ],
-  }),
-});
+import { usePageMeta } from "@/lib/page-meta";
 
 // ============ ANIMAÇÕES ============
 const fadeUp = {
@@ -128,7 +108,23 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 }
 
 // ============ PAGE ============
-function AdvIa() {
+export default function AdvIa() {
+  usePageMeta({
+    title: "ADV-IA — Inteligência Artificial aplicada ao Direito | Thiago Sobral",
+    meta: [
+      {
+        name: "description",
+        content:
+          "32 aulas e 15 horas de formação prática em IA para advogados. Engenharia de prompts, agentes de IA e protocolos de segurança. Sem precisar saber programar.",
+      },
+      { property: "og:title", content: "ADV-IA — IA aplicada ao Direito" },
+      {
+        property: "og:description",
+        content:
+          "Domine IA no Direito: 32 aulas práticas, frameworks PTF, CIPFE e PTLFPRCD, agentes de IA personalizados. Sem expor dados, sem jurisprudência inventada.",
+      },
+    ],
+  });
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}
