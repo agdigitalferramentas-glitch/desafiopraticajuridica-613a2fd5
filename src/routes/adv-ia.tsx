@@ -133,7 +133,7 @@ function AdvIa() {
       {/* HERO */}
       <section className="relative overflow-hidden text-white">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+          className="absolute inset-0 bg-cover bg-bottom bg-no-repeat md:hidden"
           style={{ backgroundImage: `url(${heroBg})` }}
           aria-hidden
         />
