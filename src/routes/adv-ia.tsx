@@ -703,7 +703,7 @@ function AdvIa() {
           </Reveal>
 
           {/* Preço */}
-          <Reveal className="mx-auto mt-12 max-w-2xl rounded-3xl border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.18_0_0/0.6)] p-8 text-center shadow-glow backdrop-blur md:p-12">
+          <Reveal id="preco" className="mx-auto mt-12 max-w-2xl rounded-3xl border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.18_0_0/0.6)] p-8 text-center shadow-glow backdrop-blur md:p-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.93_0.05_245)]">
               Seu investimento hoje
             </p>
