@@ -92,9 +92,7 @@ function CTA({
 }) {
   return (
     <a
-      href="https://pay.kiwify.com.br/sgL2spg"
-      target="_blank"
-      rel="noopener noreferrer"
+      href="#preco"
       className={`group relative inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 md:text-base ${className}`}
     >
       {children}
@@ -883,7 +881,15 @@ function AdvIa() {
               ou <strong className="text-white">R$ 497,00</strong> à vista
             </p>
             <div className="mt-8">
-              <CTA>Quero produzir mais em menos tempo</CTA>
+              <a
+                href="https://pay.kiwify.com.br/sgL2spg"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 md:text-base"
+              >
+                Quero produzir mais em menos tempo
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </div>
           </Reveal>
         </div>
