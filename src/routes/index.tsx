@@ -60,7 +60,7 @@ function LeadForm({ id = "lead", inline = false }: { id?: string; inline?: boole
       }
 
       setSubmitted(true);
-      navigate({ to: "/djp0526-obg" });
+      navigate("/djp0526-obg");
     } catch (err) {
       console.error("Webhook submission failed:", err);
       toast.error("Não foi possível enviar sua inscrição", {
