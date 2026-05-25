@@ -1,4 +1,4 @@
-# DEPLOYHUB_NGINX_SPA_V13
+# DEPLOYHUB_NGINX_SPA_V14
 # Dockerfile robusto para Dokploy: Vite/React SPA via Nginx + fallback SSR TanStack/Node, inclusive apps dentro de /client.
 FROM node:22-alpine AS build
 WORKDIR /app
@@ -184,6 +184,7 @@ NGINX_MAIN
 cat > /tmp/deployhub-nginx.conf <<NGINX
 server {
   listen 80 default_server;
+  listen 3000;
   server_name _;
   root /usr/share/nginx/html;
   index index.html;
