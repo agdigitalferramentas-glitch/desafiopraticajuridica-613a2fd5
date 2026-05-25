@@ -152,10 +152,11 @@ function AdvIa() {
             transition={{ duration: 0.7 }}
             className="max-w-3xl"
           >
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.65_0.19_250/0.1)] px-3 py-1 text-xs font-medium uppercase tracking-widest text-[oklch(0.93_0.05_245)]">
-              <Sparkles className="h-3.5 w-3.5" />
-              ADV-IA · Formação prática
-            </div>
+            <img
+              src={logoAdvIa}
+              alt="ADV-IA"
+              className="mb-6 h-16 w-auto md:h-20"
+            />
 
             <h1 className="font-display text-[1.7rem] font-normal leading-[1.15] text-balance sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem]">
               O advogado do escritório ao lado já usa IA.{" "}
