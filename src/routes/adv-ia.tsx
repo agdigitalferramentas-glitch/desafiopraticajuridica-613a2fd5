@@ -92,7 +92,9 @@ function CTA({
 }) {
   return (
     <a
-      href="#preco"
+      href="https://pay.kiwify.com.br/sgL2spg"
+      target="_blank"
+      rel="noopener noreferrer"
       className={`group relative inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 md:text-base ${className}`}
     >
       {children}
