@@ -23,6 +23,7 @@ import thiagoImg from "@/assets/thiago.webp";
 import heroBg from "@/assets/bg-1-vendas-advia-mobile.webp";
 import heroBgDesktop from "@/assets/bg-1-vendas-advia-desktop.webp";
 import logoNiu from "@/assets/logo-niu.png";
+import logoAdvIa from "@/assets/logotipo-advia.svg";
 
 export const Route = createFileRoute("/adv-ia")({
   component: AdvIa,
