@@ -155,7 +155,7 @@ function AdvIa() {
             <img
               src={logoAdvIa}
               alt="ADV-IA"
-              className="mb-6 h-16 w-auto md:h-20"
+              className="mb-6 h-11 w-auto md:h-14"
             />
 
             <h1 className="font-display text-[1.7rem] font-normal leading-[1.15] text-balance sm:text-3xl md:text-[2.5rem] lg:text-[2.75rem]">
