@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import thiagoImg from "@/assets/thiago.webp";
 import heroBg from "@/assets/hero-bg.webp";
+import heroBgDesktop from "@/assets/bg-1-vendas-advia-desktop.webp";
 import logoNiu from "@/assets/logo-niu.png";
 
 export const Route = createFileRoute("/adv-ia")({
