@@ -775,7 +775,15 @@ function AdvIa() {
                     decisão é sua.
                   </p>
                   <div className="mt-6 flex flex-col items-center gap-3 md:items-start">
-                    <CTA>Entrar com garantia de 7 dias</CTA>
+                    <a
+                      href="https://pay.kiwify.com.br/sgL2spg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group relative inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 md:text-base"
+                    >
+                      Entrar com garantia de 7 dias
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </a>
                     <p className="flex items-center gap-1.5 text-xs text-muted-foreground">
                       <Lock className="h-3.5 w-3.5" /> Compra 100% segura.
                     </p>
