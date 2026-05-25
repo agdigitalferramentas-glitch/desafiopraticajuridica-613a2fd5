@@ -108,7 +108,23 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 }
 
 // ============ PAGE ============
-function AdvIa() {
+export default function AdvIa() {
+  usePageMeta({
+    title: "ADV-IA — Inteligência Artificial aplicada ao Direito | Thiago Sobral",
+    meta: [
+      {
+        name: "description",
+        content:
+          "32 aulas e 15 horas de formação prática em IA para advogados. Engenharia de prompts, agentes de IA e protocolos de segurança. Sem precisar saber programar.",
+      },
+      { property: "og:title", content: "ADV-IA — IA aplicada ao Direito" },
+      {
+        property: "og:description",
+        content:
+          "Domine IA no Direito: 32 aulas práticas, frameworks PTF, CIPFE e PTLFPRCD, agentes de IA personalizados. Sem expor dados, sem jurisprudência inventada.",
+      },
+    ],
+  });
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}

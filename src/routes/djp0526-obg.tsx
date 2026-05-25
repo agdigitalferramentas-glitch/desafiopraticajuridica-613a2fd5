@@ -1,39 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
 import obgBg from "@/assets/obg-bg.webp";
-
-export const Route = createFileRoute("/djp0526-obg")({
-  component: ThankYouPage,
-  head: () => ({
-    meta: [
-      { title: "Falta apenas um passo — Desafio Prática Jurídica com IA" },
-      {
-        name: "description",
-        content:
-          "Sua inscrição está quase completa. Entre no grupo do WhatsApp para confirmar sua vaga no Desafio Prática Jurídica com IA.",
-      },
-      { name: "robots", content: "noindex, nofollow" },
-      {
-        property: "og:title",
-        content: "Falta apenas um passo — Desafio Prática Jurídica com IA",
-      },
-      {
-        property: "og:description",
-        content:
-          "Entre no grupo do WhatsApp para confirmar sua vaga e receber tudo sobre o Desafio.",
-      },
-    ],
-  }),
-  scripts: () => [
-    {
-      src: "https://iwrrijemxtudyakmhajk.supabase.co/functions/v1/tracking-pixel?pid=4a4c2aff-3657-4ed9-8e36-f11a6d70db12&track=all",
-    },
-    {
-      children:
-        "window.addEventListener('load',function(){window.AGMetrics&&window.AGMetrics.track('thank_you_page',{page:window.location.pathname,referrer:document.referrer});});",
-    },
-  ],
-});
+import { usePageMeta } from "@/lib/page-meta";
 
 const WHATSAPP_URL =
   "https://chat.whatsapp.com/LNTqg22g5MNHpHwY3cwKS5?name=&nome=&email=&page_code=ipa0526-grupos&funnel=9";

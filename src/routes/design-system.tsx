@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -9,16 +8,7 @@ import { Alert, AlertTitle, AlertDescription } from "@/components/ui/alert";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Sparkles, Info } from "lucide-react";
-
-export const Route = createFileRoute("/design-system")({
-  head: () => ({
-    meta: [
-      { title: "Design System — Desafio Prática Jurídica" },
-      { name: "description", content: "Tokens, tipografia, cores, espaçamentos e componentes do design system." },
-    ],
-  }),
-  component: DesignSystemPage,
-});
+import { usePageMeta } from "@/lib/page-meta";
 
 type Token = { name: string; varName: string; value: string };
 
