@@ -197,7 +197,28 @@ function CtaButton({
   );
 }
 
-function Index() {
+export default function Index() {
+  usePageMeta({
+    title: "Desafio Prática Jurídica com IA — Thiago Sobral",
+    meta: [
+      {
+        name: "description",
+        content:
+          "2 dias ao vivo e gratuitos para advogados: aprenda a estruturar IA na sua rotina jurídica com segurança técnica. 26 e 27 de maio.",
+      },
+      { property: "og:title", content: "Desafio Prática Jurídica com IA" },
+      {
+        property: "og:description",
+        content:
+          "Você realmente quer continuar peticionando do mesmo jeito nos próximos 5 anos? Evento gratuito ao vivo com Thiago Sobral.",
+      },
+    ],
+    scripts: [
+      {
+        src: "https://iwrrijemxtudyakmhajk.supabase.co/functions/v1/tracking-pixel?pid=4a4c2aff-3657-4ed9-8e36-f11a6d70db12&track=all",
+      },
+    ],
+  });
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}
