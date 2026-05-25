@@ -58,13 +58,16 @@ function Reveal({
   children,
   className = "",
   delay = 0,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  id?: string;
 }) {
   return (
     <motion.div
+      id={id}
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
@@ -87,7 +90,7 @@ function CTA({
 }) {
   return (
     <a
-      href="#oferta"
+      href="#preco"
       className={`group relative inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 md:text-base ${className}`}
     >
       {children}
@@ -703,7 +706,7 @@ function AdvIa() {
           </Reveal>
 
           {/* Preço */}
-          <Reveal className="mx-auto mt-12 max-w-2xl rounded-3xl border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.18_0_0/0.6)] p-8 text-center shadow-glow backdrop-blur md:p-12">
+          <Reveal id="preco" className="mx-auto mt-12 max-w-2xl rounded-3xl border border-[oklch(0.65_0.19_250/0.4)] bg-[oklch(0.18_0_0/0.6)] p-8 text-center shadow-glow backdrop-blur md:p-12">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.93_0.05_245)]">
               Seu investimento hoje
             </p>
