@@ -1,4 +1,4 @@
-# DEPLOYHUB_NGINX_SPA_V12
+# DEPLOYHUB_NGINX_SPA_V13
 # Dockerfile robusto para Dokploy: Vite/React SPA via Nginx + fallback SSR TanStack/Node, inclusive apps dentro de /client.
 FROM node:22-alpine AS build
 WORKDIR /app
