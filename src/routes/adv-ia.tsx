@@ -673,7 +673,7 @@ function AdvIa() {
               {
                 t: "Acesso à Comunidade de Alunos",
                 d: "Canal exclusivo para dúvidas, troca de experiências e atualizações sobre IA no Direito.",
-                v: "Incluso",
+                v: "Valor: R$197,00",
               },
             ].map((b) => (
               <motion.div
