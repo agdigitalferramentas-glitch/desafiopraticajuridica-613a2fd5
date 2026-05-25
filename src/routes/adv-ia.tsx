@@ -671,11 +671,6 @@ function AdvIa() {
                 v: "R$ 497,00",
               },
               {
-                t: "Guia de Segurança e Ética no Uso de IA",
-                d: "Protocolo de verificação, proteção de dados sensíveis e boas práticas para uso responsável no ambiente jurídico.",
-                v: "R$ 297,00",
-              },
-              {
                 t: "Acesso à Comunidade de Alunos",
                 d: "Canal exclusivo para dúvidas, troca de experiências e atualizações sobre IA no Direito.",
                 v: "Incluso",
