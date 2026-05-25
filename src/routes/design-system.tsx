@@ -116,7 +116,13 @@ function Section({
   );
 }
 
-function DesignSystemPage() {
+export default function DesignSystemPage() {
+  usePageMeta({
+    title: "Design System — Desafio Prática Jurídica",
+    meta: [
+      { name: "description", content: "Tokens, tipografia, cores, espaçamentos e componentes do design system." },
+    ],
+  });
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
