@@ -58,13 +58,16 @@ function Reveal({
   children,
   className = "",
   delay = 0,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   delay?: number;
+  id?: string;
 }) {
   return (
     <motion.div
+      id={id}
       variants={fadeUp}
       initial="hidden"
       whileInView="show"
