@@ -732,7 +732,9 @@ function AdvIa() {
 
             <div className="mt-8">
               <a
-                href="#"
+                href="https://pay.kiwify.com.br/sgL2spg"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-5 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 sm:w-auto md:text-base"
               >
                 Quero produzir mais em menos tempo
