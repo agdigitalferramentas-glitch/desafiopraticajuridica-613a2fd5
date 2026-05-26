@@ -63,11 +63,23 @@ export default function AdvIaObgPage() {
         aria-hidden
       />
       <div
-        className="absolute inset-y-0 right-0 hidden w-full bg-cover bg-no-repeat md:block xl:left-0 xl:right-auto xl:w-[calc(100%+350px)] 2xl:w-[calc(100%+500px)]"
-        style={{ backgroundImage: `url(${heroBgDesktop})`, backgroundPosition: "right top" }}
+        className="absolute inset-0 hidden bg-no-repeat md:block"
+        style={{
+          backgroundImage: `url(${heroBgDesktop})`,
+          backgroundSize: "auto 100%",
+          backgroundPosition: "right top",
+        }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-black/60" aria-hidden />
+      <div className="absolute inset-0 bg-black/60 md:hidden" aria-hidden />
+      <div
+        className="absolute inset-0 hidden md:block"
+        style={{
+          background:
+            "linear-gradient(to right, hsl(var(--background)) 0%, hsl(var(--background)) 45%, hsl(var(--background) / 0.85) 60%, hsl(var(--background) / 0.4) 78%, transparent 100%)",
+        }}
+        aria-hidden
+      />
       <div className="pointer-events-none absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.18)] blur-3xl animate-float" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-[22rem] w-[22rem] -translate-x-1/3 translate-y-1/3 rounded-full bg-[oklch(0.65_0.19_250/0.12)] blur-3xl" />
 
