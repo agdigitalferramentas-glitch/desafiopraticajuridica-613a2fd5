@@ -58,13 +58,13 @@ export default function AdvIaObgPage() {
     <main className="relative min-h-screen overflow-hidden bg-background text-white">
       {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-bottom bg-no-repeat md:hidden"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: "150px bottom" }}
+        className="absolute inset-0 bg-no-repeat md:hidden"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "right -150px bottom" }}
         aria-hidden
       />
       <div
-        className="absolute inset-0 hidden bg-cover bg-top bg-no-repeat md:block"
-        style={{ backgroundImage: `url(${heroBgDesktop})`, backgroundPosition: "150px top" }}
+        className="absolute inset-0 hidden bg-no-repeat md:block"
+        style={{ backgroundImage: `url(${heroBgDesktop})`, backgroundSize: "cover", backgroundPosition: "right -250px top" }}
         aria-hidden
       />
       <div className="absolute inset-0 bg-black/60" aria-hidden />
