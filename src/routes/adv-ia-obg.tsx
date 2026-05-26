@@ -63,11 +63,10 @@ export default function AdvIaObgPage() {
         aria-hidden
       />
       <div
-        className="absolute inset-0 hidden bg-no-repeat md:block"
+        className="absolute inset-0 hidden bg-cover bg-no-repeat md:block"
         style={{
           backgroundImage: `url(${heroBgDesktop})`,
-          backgroundSize: "auto 100%",
-          backgroundPosition: "right top",
+          backgroundPosition: "right center",
         }}
         aria-hidden
       />
@@ -76,7 +75,7 @@ export default function AdvIaObgPage() {
         className="absolute inset-0 hidden md:block"
         style={{
           background:
-            "linear-gradient(to right, hsl(var(--background)) 0%, hsl(var(--background)) 45%, hsl(var(--background) / 0.85) 60%, hsl(var(--background) / 0.4) 78%, transparent 100%)",
+            "linear-gradient(to right, hsl(var(--background)) 0%, hsl(var(--background) / 0.95) 40%, hsl(var(--background) / 0.85) 55%, hsl(var(--background) / 0.5) 75%, hsl(var(--background) / 0.2) 90%, transparent 100%)",
         }}
         aria-hidden
       />
