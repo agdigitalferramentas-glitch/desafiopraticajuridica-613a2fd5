@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import Index from "@/routes/index";
 import AdvIa from "@/routes/adv-ia";
+import AdvIaObg from "@/routes/adv-ia-obg";
 import DesignSystem from "@/routes/design-system";
 import ThankYou from "@/routes/djp0526-obg";
 
@@ -30,6 +31,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/adv-ia" element={<AdvIa />} />
+        <Route path="/adv-ia-obg" element={<AdvIaObg />} />
         <Route path="/design-system" element={<DesignSystem />} />
         <Route path="/djp0526-obg" element={<ThankYou />} />
         <Route path="*" element={<NotFound />} />
