@@ -6,7 +6,7 @@ import logoAdvIa from "@/assets/logotipo-advia.svg";
 import { usePageMeta } from "@/lib/page-meta";
 
 const WHATSAPP_GROUP_URL = "https://chat.whatsapp.com/";
-const WHATSAPP_SUPPORT_URL = "https://niucursos.com.br/suport";
+const WHATSAPP_SUPPORT_URL = "https://niucursos.com.br/suporte";
 const SUPPORT_EMAIL = "mailto:contato@niucursos.com";
 
 export default function AdvIaObgPage() {
