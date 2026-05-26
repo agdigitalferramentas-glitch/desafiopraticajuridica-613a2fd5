@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CheckCircle2, ArrowRight, Sparkles, AlertTriangle, Mail } from "lucide-react";
-import heroBg from "@/assets/bg-1-obrigado-vendas-advia.webp";
+import heroBgMobile from "@/assets/bg-1-obrigado-vendas-advia-mobile.webp";
 import heroBgDesktop from "@/assets/bg-1-obrigado-vendas-advia.webp";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
 import { usePageMeta } from "@/lib/page-meta";
@@ -58,7 +58,12 @@ export default function AdvIaObgPage() {
     <main className="relative min-h-screen overflow-hidden bg-background text-white">
       {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-no-repeat lg:hidden"
+        style={{ backgroundImage: `url(${heroBgMobile})`, backgroundPosition: "center bottom" }}
+        aria-hidden
+      />
+      <div
+        className="absolute inset-0 bg-cover bg-no-repeat hidden lg:block"
         style={{ backgroundImage: `url(${heroBgDesktop})`, backgroundPosition: "center top" }}
         aria-hidden
       />
