@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { CheckCircle2, ArrowRight, Sparkles, AlertTriangle, Mail, MessageCircle } from "lucide-react";
 import heroBg from "@/assets/bg-1-vendas-advia-mobile.webp";
 import heroBgDesktop from "@/assets/bg-1-vendas-advia-desktop.webp";
@@ -9,6 +10,13 @@ const WHATSAPP_SUPPORT_URL = "https://wa.me/";
 const SUPPORT_EMAIL = "mailto:suporte@thiagosobral.com.br";
 
 export default function AdvIaObgPage() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const t = setTimeout(() => setProgress(90), 150);
+    return () => clearTimeout(t);
+  }, []);
+
   usePageMeta({
     title: "Bem-vindo à nova elite jurídica — ADV-IA",
     meta: [
@@ -62,8 +70,8 @@ export default function AdvIaObgPage() {
             aria-label="Progresso da inscrição"
           >
             <div
-              className="h-full rounded-full bg-accent-gradient shadow-glow transition-[width] duration-700"
-              style={{ width: "90%" }}
+              className="h-full rounded-full bg-accent-gradient shadow-glow transition-[width] duration-[2000ms] ease-out"
+              style={{ width: `${progress}%` }}
             />
           </div>
         </div>
