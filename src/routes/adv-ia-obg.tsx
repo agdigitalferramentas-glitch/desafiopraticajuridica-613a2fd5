@@ -63,8 +63,8 @@ export default function AdvIaObgPage() {
         aria-hidden
       />
       <div
-        className="absolute inset-y-0 left-0 hidden w-[calc(100%+150px)] bg-cover bg-no-repeat md:block xl:w-[calc(100%+350px)] 2xl:w-[calc(100%+500px)]"
-        style={{ backgroundImage: `url(${heroBgDesktop})`, backgroundPosition: "left top" }}
+        className="absolute inset-y-0 right-0 hidden w-full bg-cover bg-no-repeat md:block xl:left-0 xl:right-auto xl:w-[calc(100%+350px)] 2xl:w-[calc(100%+500px)]"
+        style={{ backgroundImage: `url(${heroBgDesktop})`, backgroundPosition: "right top" }}
         aria-hidden
       />
       <div className="absolute inset-0 bg-black/60" aria-hidden />
