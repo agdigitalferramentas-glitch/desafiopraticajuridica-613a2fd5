@@ -10,6 +10,13 @@ const WHATSAPP_SUPPORT_URL = "https://wa.me/";
 const SUPPORT_EMAIL = "mailto:suporte@thiagosobral.com.br";
 
 export default function AdvIaObgPage() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const t = setTimeout(() => setProgress(90), 150);
+    return () => clearTimeout(t);
+  }, []);
+
   usePageMeta({
     title: "Bem-vindo à nova elite jurídica — ADV-IA",
     meta: [
