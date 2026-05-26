@@ -78,7 +78,7 @@ export default function AdvIaObgPage() {
         {/* Progress bar */}
         <div className="w-full max-w-xl">
           <div className="mb-2 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.93_0.05_245)]">
-            <span>90% concluído</span>
+            <span>{displayedPercent}% concluído</span>
           </div>
           <div
             className="h-2.5 w-full overflow-hidden rounded-full bg-white/10"
