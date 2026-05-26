@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CheckCircle2, ArrowRight, Sparkles, AlertTriangle, Mail, MessageCircle } from "lucide-react";
+import { CheckCircle2, ArrowRight, Sparkles, AlertTriangle, Mail } from "lucide-react";
 import heroBg from "@/assets/bg-1-vendas-advia-mobile.webp";
 import heroBgDesktop from "@/assets/bg-1-vendas-advia-desktop.webp";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
