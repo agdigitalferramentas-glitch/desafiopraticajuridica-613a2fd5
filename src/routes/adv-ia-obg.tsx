@@ -11,11 +11,30 @@ const SUPPORT_EMAIL = "mailto:suporte@thiagosobral.com.br";
 
 export default function AdvIaObgPage() {
   const [progress, setProgress] = useState(0);
+  const [displayedPercent, setDisplayedPercent] = useState(0);
 
   useEffect(() => {
     const t = setTimeout(() => setProgress(90), 150);
     return () => clearTimeout(t);
   }, []);
+
+  useEffect(() => {
+    if (progress === 0) return;
+    const duration = 2000;
+    const start = performance.now();
+    const from = 0;
+    const to = 90;
+
+    const animate = (now: number) => {
+      const elapsed = now - start;
+      const fraction = Math.min(elapsed / duration, 1);
+      const current = Math.round(from + (to - from) * fraction);
+      setDisplayedPercent(current);
+      if (fraction < 1) requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+  }, [progress]);
 
   usePageMeta({
     title: "Bem-vindo à nova elite jurídica — ADV-IA",
@@ -59,7 +78,7 @@ export default function AdvIaObgPage() {
         {/* Progress bar */}
         <div className="w-full max-w-xl">
           <div className="mb-2 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-[oklch(0.93_0.05_245)]">
-            <span>90% concluído</span>
+            <span>{displayedPercent}% concluído</span>
           </div>
           <div
             className="h-2.5 w-full overflow-hidden rounded-full bg-white/10"
