@@ -70,8 +70,8 @@ export default function AdvIaObgPage() {
             aria-label="Progresso da inscrição"
           >
             <div
-              className="h-full rounded-full bg-accent-gradient shadow-glow transition-[width] duration-700"
-              style={{ width: "90%" }}
+              className="h-full rounded-full bg-accent-gradient shadow-glow transition-[width] duration-[2000ms] ease-out"
+              style={{ width: `${progress}%` }}
             />
           </div>
         </div>
