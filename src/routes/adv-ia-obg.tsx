@@ -59,12 +59,12 @@ export default function AdvIaObgPage() {
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-bottom bg-no-repeat md:hidden"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: "150px bottom" }}
         aria-hidden
       />
       <div
         className="absolute inset-0 hidden bg-cover bg-top bg-no-repeat md:block"
-        style={{ backgroundImage: `url(${heroBgDesktop})` }}
+        style={{ backgroundImage: `url(${heroBgDesktop})`, backgroundPosition: "150px top" }}
         aria-hidden
       />
       <div className="absolute inset-0 bg-black/60" aria-hidden />
