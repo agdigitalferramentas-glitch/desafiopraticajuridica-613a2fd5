@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CheckCircle2, ArrowRight, Sparkles, AlertTriangle, Mail } from "lucide-react";
-import heroBg from "@/assets/bg-1-vendas-advia-mobile.webp";
-import heroBgDesktop from "@/assets/bg-1-vendas-advia-desktop.webp";
+import heroBg from "@/assets/bg-1-obrigado-vendas-advia.webp";
+import heroBgDesktop from "@/assets/bg-1-obrigado-vendas-advia.webp";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
 import { usePageMeta } from "@/lib/page-meta";
 
