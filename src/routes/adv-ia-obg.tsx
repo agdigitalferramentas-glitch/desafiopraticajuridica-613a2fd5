@@ -11,11 +11,30 @@ const SUPPORT_EMAIL = "mailto:suporte@thiagosobral.com.br";
 
 export default function AdvIaObgPage() {
   const [progress, setProgress] = useState(0);
+  const [displayedPercent, setDisplayedPercent] = useState(0);
 
   useEffect(() => {
     const t = setTimeout(() => setProgress(90), 150);
     return () => clearTimeout(t);
   }, []);
+
+  useEffect(() => {
+    if (progress === 0) return;
+    const duration = 2000;
+    const start = performance.now();
+    const from = 0;
+    const to = 90;
+
+    const animate = (now: number) => {
+      const elapsed = now - start;
+      const fraction = Math.min(elapsed / duration, 1);
+      const current = Math.round(from + (to - from) * fraction);
+      setDisplayedPercent(current);
+      if (fraction < 1) requestAnimationFrame(animate);
+    };
+
+    requestAnimationFrame(animate);
+  }, [progress]);
 
   usePageMeta({
     title: "Bem-vindo à nova elite jurídica — ADV-IA",
