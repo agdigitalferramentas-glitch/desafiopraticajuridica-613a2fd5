@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CheckCircle2, ArrowRight, Sparkles, AlertTriangle, Mail } from "lucide-react";
-import heroBg from "@/assets/bg-1-vendas-advia-mobile.webp";
-import heroBgDesktop from "@/assets/bg-1-vendas-advia-desktop.webp";
+import heroBg from "@/assets/bg-1-obrigado-vendas-advia.webp";
+import heroBgDesktop from "@/assets/bg-1-obrigado-vendas-advia.webp";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
 import { usePageMeta } from "@/lib/page-meta";
 
@@ -58,27 +58,11 @@ export default function AdvIaObgPage() {
     <main className="relative min-h-screen overflow-hidden bg-background text-white">
       {/* Background */}
       <div
-        className="absolute inset-0 bg-cover bg-no-repeat md:hidden"
-        style={{ backgroundImage: `url(${heroBg})`, backgroundPosition: "20% bottom" }}
+        className="absolute inset-0 bg-cover bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBgDesktop})`, backgroundPosition: "center top" }}
         aria-hidden
       />
-      <div
-        className="absolute inset-0 hidden bg-cover bg-no-repeat md:block"
-        style={{
-          backgroundImage: `url(${heroBgDesktop})`,
-          backgroundPosition: "right center",
-        }}
-        aria-hidden
-      />
-      <div className="absolute inset-0 bg-black/60 md:hidden" aria-hidden />
-      <div
-        className="absolute inset-0 hidden md:block"
-        style={{
-          background:
-            "linear-gradient(to right, hsl(var(--background)) 0%, hsl(var(--background) / 0.95) 40%, hsl(var(--background) / 0.85) 55%, hsl(var(--background) / 0.5) 75%, hsl(var(--background) / 0.2) 90%, transparent 100%)",
-        }}
-        aria-hidden
-      />
+      <div className="absolute inset-0 bg-black/60" aria-hidden />
       <div className="pointer-events-none absolute -top-32 -right-32 h-[28rem] w-[28rem] rounded-full bg-[oklch(0.65_0.19_250/0.18)] blur-3xl animate-float" />
       <div className="pointer-events-none absolute bottom-0 left-0 h-[22rem] w-[22rem] -translate-x-1/3 translate-y-1/3 rounded-full bg-[oklch(0.65_0.19_250/0.12)] blur-3xl" />
 
