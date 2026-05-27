@@ -111,6 +111,12 @@ export default function AdvIaReplay2Page() {
             to="/adv-ia-replay"
             className="group block w-full max-w-xl overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-glow backdrop-blur transition-transform hover:-translate-y-0.5"
           >
+            <div className="flex items-center justify-between gap-4 px-6 py-5">
+              <p className="font-display text-base font-normal leading-snug text-white sm:text-lg">
+                Perdeu a <em className="text-[oklch(0.93_0.05_245)]">Aula 1</em>? Assista agora.
+              </p>
+              <ArrowRight className="h-5 w-5 shrink-0 text-white transition-transform group-hover:translate-x-1" />
+            </div>
             <div className="relative aspect-video w-full overflow-hidden">
               <img
                 src={AULA1_THUMB}
@@ -122,12 +128,6 @@ export default function AdvIaReplay2Page() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <PlayCircle className="h-16 w-16 text-white drop-shadow-lg transition-transform group-hover:scale-110" />
               </div>
-            </div>
-            <div className="flex items-center justify-between gap-4 px-6 py-5">
-              <p className="font-display text-base font-normal leading-snug text-white sm:text-lg">
-                Perdeu a <em className="text-[oklch(0.93_0.05_245)]">Aula 1</em>? Assista agora.
-              </p>
-              <ArrowRight className="h-5 w-5 shrink-0 text-white transition-transform group-hover:translate-x-1" />
             </div>
           </Link>
         </div>
