@@ -89,9 +89,9 @@ export default function AdvIaReplayPage() {
 
         {/* CTA section */}
         <div className="mt-16 flex flex-col items-center text-center md:mt-20">
-          <h2 className="font-display text-2xl font-normal leading-tight text-balance sm:text-3xl md:text-4xl">
+          <h2 className="font-display text-xl font-normal leading-tight text-balance sm:text-2xl md:text-3xl">
             Clique aqui se você não quer{" "}
-            <em className="text-[oklch(0.93_0.05_245)]">perder mais nenhuma venda</em>
+            <em className="text-[oklch(0.93_0.05_245)]">perder mais tempo</em>
           </h2>
           <a
             href={CHECKOUT_URL}
