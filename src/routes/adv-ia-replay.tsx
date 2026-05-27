@@ -68,9 +68,6 @@ export default function AdvIaReplayPage() {
 
           {/* Right: video */}
           <div className="w-full">
-            <p className="mb-4 text-center text-sm font-medium text-white/80 lg:text-base">
-              Assista à reprise enquanto está disponível.
-            </p>
             <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 shadow-glow backdrop-blur">
               <div className="relative aspect-video w-full">
                 <iframe
