@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import Index from "@/routes/index";
 import AdvIa from "@/routes/adv-ia";
 import AdvIaObg from "@/routes/adv-ia-obg";
+import AdvIaReplay from "@/routes/adv-ia-replay";
 import DesignSystem from "@/routes/design-system";
 import ThankYou from "@/routes/djp0526-obg";
 
