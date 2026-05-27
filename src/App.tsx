@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 import { Toaster } from "@/components/ui/sonner";
 import Index from "@/routes/index";
 import AdvIa from "@/routes/adv-ia";
@@ -31,7 +31,7 @@ export default function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/" element={<Navigate to="/adv-ia-replay" replace />} />
         <Route path="/adv-ia" element={<AdvIa />} />
         <Route path="/adv-ia-obg" element={<AdvIaObg />} />
         <Route path="/adv-ia-replay" element={<AdvIaReplay />} />
