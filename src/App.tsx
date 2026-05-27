@@ -35,6 +35,7 @@ export default function App() {
         <Route path="/adv-ia" element={<AdvIa />} />
         <Route path="/adv-ia-obg" element={<AdvIaObg />} />
         <Route path="/adv-ia-replay" element={<AdvIaReplay />} />
+        <Route path="/adv-ia-replay2" element={<AdvIaReplay2 />} />
         <Route path="/design-system" element={<DesignSystem />} />
         <Route path="/djp0526-obg" element={<ThankYou />} />
         <Route path="*" element={<NotFound />} />
