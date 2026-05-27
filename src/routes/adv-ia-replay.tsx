@@ -58,7 +58,7 @@ export default function AdvIaReplayPage() {
               Replay liberado
             </span>
             <h1 className="mt-6 font-display text-3xl font-normal leading-[1.1] text-balance sm:text-4xl md:text-5xl lg:text-6xl">
-              Perdeu o <em className="text-[oklch(0.93_0.05_245)]">AULÃO ADV-IA</em>?
+              Perdeu a <em className="text-[oklch(0.93_0.05_245)]">Aula 1</em>?
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-white/85 text-balance sm:text-lg lg:mx-0">
               Assista à reprise enquanto está disponível e descubra como transformar
