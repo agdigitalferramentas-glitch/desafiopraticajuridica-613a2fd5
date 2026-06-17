@@ -110,12 +110,12 @@ export default function AdvIaReplayPage() {
           <div>
             Desenvolvido por{" "}
             <a
-              href="https://agwebi.com.br"
+              href="https://agwebi.com.br/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[oklch(0.93_0.05_245)] hover:underline"
             >
-              AG WEBi
+              AGWEBi
             </a>
           </div>
         </footer>
