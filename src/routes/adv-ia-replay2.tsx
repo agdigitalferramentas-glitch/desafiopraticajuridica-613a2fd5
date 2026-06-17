@@ -136,7 +136,18 @@ export default function AdvIaReplay2Page() {
         <footer className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row">
           <div className="flex items-center gap-3">
             <img src={logoNiu} alt="NIU Cursos" className="h-6 w-auto opacity-80" />
-            <span>©{new Date().getFullYear()} Niu Cursos — Todos os direitos reservados</span>
+            <span>©2026 Niu Cursos – Todos os direitos reservados</span>
+          </div>
+          <div>
+            Desenvolvido por{" "}
+            <a
+              href="https://agwebi.com.br"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[oklch(0.93_0.05_245)] hover:underline"
+            >
+              AG WEBi
+            </a>
           </div>
         </footer>
       </section>
