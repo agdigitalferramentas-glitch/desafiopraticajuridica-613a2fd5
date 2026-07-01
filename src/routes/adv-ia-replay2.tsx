@@ -13,6 +13,8 @@ const YT_EMBED = `https://www.youtube.com/embed/${YT_ID}`;
 const AULA1_YT_ID = "4l3emCfzdu0";
 const AULA1_THUMB = `https://img.youtube.com/vi/${AULA1_YT_ID}/maxresdefault.jpg`;
 
+const CUPOM = "ANIVERSARIONIU";
+
 export default function AdvIaReplay2Page() {
   usePageMeta({
     title: "Replay Aula 2 — ADV-IA | NIU Cursos",
