@@ -1,4 +1,5 @@
-import { ArrowRight, PlayCircle } from "lucide-react";
+import { ArrowRight, PlayCircle, Tag } from "lucide-react";
+import { useState, useCallback } from "react";
 import heroBgMobile from "@/assets/bg-1-obrigado-vendas-advia-mobile.webp";
 import heroBgDesktop from "@/assets/bg-1-obrigado-vendas-advia.webp";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
@@ -7,6 +8,8 @@ import { usePageMeta } from "@/lib/page-meta";
 
 const CHECKOUT_URL = "https://pay.kiwify.com.br/sgL2spg";
 const YT_EMBED = "https://www.youtube.com/embed/4l3emCfzdu0";
+
+const CUPOM = "ANIVERSARIONIU";
 
 export default function AdvIaReplayPage() {
   usePageMeta({
@@ -25,6 +28,15 @@ export default function AdvIaReplayPage() {
       },
     ],
   });
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(() => {
+    navigator.clipboard.writeText(CUPOM).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }, []);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-white">
@@ -99,6 +111,37 @@ export default function AdvIaReplayPage() {
             Quero me inscrever agora
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </a>
+        </div>
+
+        {/* Cupom */}
+        <div className="mt-10 flex flex-col items-center">
+          <button
+            onClick={handleCopy}
+            className="group flex w-full max-w-xl items-start gap-4 rounded-xl border-l-4 border-[oklch(0.75_0.15_75)] bg-[oklch(0.96_0.03_90)] px-5 py-4 text-left shadow-lg transition-transform hover:-translate-y-0.5 cursor-pointer"
+          >
+            <Tag className="mt-0.5 h-6 w-6 shrink-0 text-[oklch(0.25_0_0)]" />
+            <div>
+              <p className="text-sm font-medium leading-snug text-[oklch(0.25_0_0)] sm:text-base">
+                Use o cupom{" "}
+                <span className="font-bold text-[oklch(0.65_0.18_75)]">
+                  {CUPOM}
+                </span>{" "}
+                no checkout e garanta seu desconto de aniversário!
+              </p>
+              <p className="mt-1 text-xs leading-relaxed text-[oklch(0.45_0.03_80)] sm:text-sm">
+                Válido até 31 de julho · Desconto aplicado automaticamente ao digitar o cupom.
+                {copied ? (
+                  <span className="ml-1 font-semibold text-[oklch(0.55_0.15_140)]">
+                    [Copiado!]
+                  </span>
+                ) : (
+                  <span className="ml-1 font-semibold text-[oklch(0.45_0.03_80)]">
+                    [CLIQUE PARA COPIAR]
+                  </span>
+                )}
+              </p>
+            </div>
+          </button>
         </div>
 
         {/* Footer */}
