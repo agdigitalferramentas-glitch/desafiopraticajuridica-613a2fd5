@@ -1,5 +1,4 @@
-import { ArrowRight, PlayCircle, Tag } from "lucide-react";
-import { useState, useCallback } from "react";
+import { ArrowRight, PlayCircle } from "lucide-react";
 import heroBgMobile from "@/assets/bg-1-obrigado-vendas-advia-mobile.webp";
 import heroBgDesktop from "@/assets/bg-1-obrigado-vendas-advia.webp";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
