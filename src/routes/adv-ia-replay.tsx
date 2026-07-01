@@ -8,8 +8,6 @@ import { usePageMeta } from "@/lib/page-meta";
 const CHECKOUT_URL = "https://pay.kiwify.com.br/sgL2spg";
 const YT_EMBED = "https://www.youtube.com/embed/4l3emCfzdu0";
 
-const CUPOM = "ANIVERSARIONIU";
-
 export default function AdvIaReplayPage() {
   usePageMeta({
     title: "Replay Liberado — ADV-IA | NIU Cursos",
@@ -27,15 +25,6 @@ export default function AdvIaReplayPage() {
       },
     ],
   });
-
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = useCallback(() => {
-    navigator.clipboard.writeText(CUPOM).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
-  }, []);
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-white">
