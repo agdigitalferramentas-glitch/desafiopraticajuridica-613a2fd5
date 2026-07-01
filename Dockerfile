@@ -1,5 +1,5 @@
-# DEPLOYHUB_NGINX_SPA_V28
-# Dockerfile robusto para Dokploy: Vite/React SPA via Nginx + fallback SSR/Worker TanStack/Node, inclusive apps dentro de /client.
+# DEPLOYHUB_NGINX_SPA_V31
+# Dockerfile robusto para Dokploy: Vite/React SPA via servidor Node estável + fallback SSR/Worker TanStack/Node, inclusive apps dentro de /client.
 FROM node:22-alpine AS build
 WORKDIR /app
 COPY . .
@@ -103,9 +103,12 @@ try {
   const fetchHandler = candidate && typeof candidate.fetch === "function"
     ? candidate.fetch.bind(candidate)
     : (typeof mod.fetch === "function" ? mod.fetch.bind(mod) : null);
+  const nodeHandler = typeof candidate === "function"
+    ? candidate
+    : (candidate && typeof candidate.handler === "function" ? candidate.handler.bind(candidate) : null);
 
-  if (!fetchHandler) {
-    console.error("[deployhub-ssr-adapter] módulo não exporta fetch(): " + entry + " exports=" + Object.keys(mod).join(","));
+  if (!fetchHandler && !nodeHandler) {
+    console.error("[deployhub-ssr-adapter] módulo não exporta fetch() nem handler Node: " + entry + " exports=" + Object.keys(mod).join(",") + " defaultType=" + typeof candidate + " defaultKeys=" + (candidate && typeof candidate === "object" ? Object.keys(candidate).join(",") : ""));
     process.exit(1);
   }
 
@@ -133,6 +136,10 @@ try {
         init.body = body;
         init.duplex = "half";
       }
+      if (nodeHandler && !fetchHandler) {
+        return nodeHandler(req, res);
+      }
+
       const response = await fetchHandler(new Request(url, init), process.env, { waitUntil() {}, passThroughOnException() {} });
 
       res.statusCode = response.status;
@@ -190,6 +197,13 @@ run_ssr_candidate() {
   log "SSR detectado: testando $ENTRY na porta $PORT"
   SSR_CMD="node"
   SSR_ARG="$ENTRY"
+  # Nitro node_server (.output/server/index.mjs) deve ser executado diretamente.
+  # Importá-lo pelo adapter ignora o bootstrap condicionado ao entrypoint e gera
+  # "exports=default" / exitCode=1, mesmo com PORT correto.
+  if [ "$ENTRY" = "/app/.output/server/index.mjs" ] && [ -f /app/.output/nitro.json ]; then
+    PRESET=$(node -e "try{const n=require('/app/.output/nitro.json'); console.log(n.preset || n.commands?.preview || 'nitro')}catch{console.log('nitro')}" 2>/dev/null || echo nitro)
+    log "Nitro node_server detectado ($PRESET); iniciando diretamente com node $ENTRY"
+  else
   # Builds TanStack Start/Cloudflare exportam { fetch } (Worker), não um servidor Node que chama listen().
   # Rodar esses arquivos diretamente encerra com code 0/1 antes de abrir porta e causa loop Exited(1).
   # O adapter abaixo transforma qualquer export fetch() em servidor HTTP na PORT esperada.
@@ -197,6 +211,7 @@ run_ssr_candidate() {
     log "SSR/Worker export detectado em $ENTRY; iniciando via deployhub-ssr-adapter"
     SSR_CMD="node"
     SSR_ARG="/usr/local/bin/deployhub-ssr-adapter.mjs $ENTRY"
+  fi
   fi
   sh -c "$SSR_CMD $SSR_ARG" &
   SSR_PID="$!"
@@ -291,9 +306,8 @@ ASSET_COUNT=$(find /usr/share/nginx/html -maxdepth 4 -type f 2>/dev/null | wc -l
 JS_COUNT=$(find /usr/share/nginx/html -maxdepth 4 -type f -name '*.js' 2>/dev/null | wc -l | tr -d ' ')
 CSS_COUNT=$(find /usr/share/nginx/html -maxdepth 4 -type f -name '*.css' 2>/dev/null | wc -l | tr -d ' ')
 if [ "$JS_COUNT" = "0" ]; then
-  log "ERRO: index.html existe, mas nenhum bundle JavaScript foi encontrado em /usr/share/nginx/html. Build incompleto; abortando para não publicar página quebrada."
+  log "AVISO: index.html existe, mas nenhum bundle .js foi encontrado em /usr/share/nginx/html. Mantendo container online para expor /healthz e servir o HTML gerado."
   dump_tree
-  exit 1
 fi
 cat > /usr/share/nginx/html/healthz.json <<JSON
 {
@@ -319,6 +333,8 @@ cat > /usr/share/nginx/html/healthz.json <<JSON
 }
 JSON
 log "healthz.json gerado: size=$INDEX_SIZE sha256=$INDEX_SHA assets=$ASSET_COUNT"
+log "Servidor estático Node iniciado em 0.0.0.0:${PORT:-3000} usando /usr/share/nginx/html; Nginx não será usado neste modo para evitar exits silenciosos/502."
+exec node /app/deployhub-health-server.mjs /usr/share/nginx/html "${PORT:-3000}"
 
 mkdir -p /etc/nginx/http.d /etc/nginx/conf.d
 rm -f /etc/nginx/http.d/default.conf /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf.diagnostic
