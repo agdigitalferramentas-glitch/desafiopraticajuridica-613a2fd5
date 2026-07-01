@@ -33,6 +33,15 @@ export default function AdvIaReplay2Page() {
     ],
   });
 
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(() => {
+    navigator.clipboard.writeText(CUPOM).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }, []);
+
   return (
     <main className="relative min-h-screen overflow-hidden bg-background text-white">
       {/* Background */}
