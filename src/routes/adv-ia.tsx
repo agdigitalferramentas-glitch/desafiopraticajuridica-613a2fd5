@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
@@ -6,6 +6,7 @@ import {
   XCircle,
   Sparkles,
   ArrowRight,
+  Tag,
   Clock,
   Lock,
   Scale,
@@ -125,6 +126,17 @@ export default function AdvIa() {
       },
     ],
   });
+
+  const CUPOM = "ANIVERSARIONIU";
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(() => {
+    navigator.clipboard.writeText(CUPOM).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }, []);
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}
@@ -734,6 +746,37 @@ export default function AdvIa() {
                 Quero produzir mais em menos tempo
                 <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </a>
+            </div>
+
+            {/* Cupom */}
+            <div className="mt-6 flex flex-col items-center">
+              <button
+                onClick={handleCopy}
+                className="group flex w-full items-start gap-4 rounded-xl border-l-4 border-[oklch(0.75_0.15_75)] bg-[oklch(0.96_0.03_90)] px-5 py-4 text-left shadow-lg transition-transform hover:-translate-y-0.5 cursor-pointer"
+              >
+                <Tag className="mt-0.5 h-6 w-6 shrink-0 text-[oklch(0.25_0_0)]" />
+                <div>
+                  <p className="text-sm font-medium leading-snug text-[oklch(0.25_0_0)] sm:text-base">
+                    Use o cupom{" "}
+                    <span className="font-bold text-[oklch(0.65_0.18_75)]">
+                      {CUPOM}
+                    </span>{" "}
+                    no checkout e garanta seu desconto de aniversário!
+                  </p>
+                  <p className="mt-1 text-xs leading-relaxed text-[oklch(0.45_0.03_80)] sm:text-sm">
+                    Válido até 31 de julho · Desconto aplicado automaticamente ao digitar o cupom.
+                    {copied ? (
+                      <span className="ml-1 font-semibold text-[oklch(0.55_0.15_140)]">
+                        [Copiado!]
+                      </span>
+                    ) : (
+                      <span className="ml-1 font-semibold text-[oklch(0.45_0.03_80)]">
+                        [CLIQUE PARA COPIAR]
+                      </span>
+                    )}
+                  </p>
+                </div>
+              </button>
             </div>
 
             <p className="mt-6 text-xs leading-relaxed text-white/60">
