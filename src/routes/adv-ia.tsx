@@ -6,6 +6,7 @@ import {
   XCircle,
   Sparkles,
   ArrowRight,
+  Tag,
   Clock,
   Lock,
   Scale,
