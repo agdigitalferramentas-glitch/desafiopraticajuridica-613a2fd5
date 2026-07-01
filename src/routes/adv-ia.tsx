@@ -126,6 +126,17 @@ export default function AdvIa() {
       },
     ],
   });
+
+  const CUPOM = "ANIVERSARIONIU";
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(() => {
+    navigator.clipboard.writeText(CUPOM).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }, []);
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* HERO */}
