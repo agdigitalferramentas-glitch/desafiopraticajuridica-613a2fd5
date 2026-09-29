@@ -24,6 +24,9 @@ import heroBgDesktop from "@/assets/bg-1-vendas-advia-desktop.webp";
 import logoNiu from "@/assets/logo-niu.png";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
 import { usePageMeta } from "@/lib/page-meta";
+import { buildCheckoutUrl } from "@/lib/checkout-url";
+
+const CHECKOUT_URL = "https://pay.kiwify.com.br/sgL2spg";
 
 // ============ ANIMAÇÕES ============
 const fadeUp = {
@@ -737,7 +740,7 @@ export default function AdvIa() {
 
             <div className="mt-8">
               <a
-                href="https://pay.kiwify.com.br/sgL2spg"
+                href={buildCheckoutUrl(CHECKOUT_URL)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-5 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 sm:w-auto md:text-base"
@@ -784,7 +787,7 @@ export default function AdvIa() {
                   </p>
                   <div className="mt-6 flex flex-col items-center gap-3 md:items-start">
                     <a
-                      href="https://pay.kiwify.com.br/sgL2spg"
+                      href={buildCheckoutUrl(CHECKOUT_URL)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group relative inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 md:text-base"
@@ -898,7 +901,7 @@ export default function AdvIa() {
             </p>
             <div className="mt-8">
               <a
-                href="https://pay.kiwify.com.br/sgL2spg"
+                href={buildCheckoutUrl(CHECKOUT_URL)}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 md:text-base"
