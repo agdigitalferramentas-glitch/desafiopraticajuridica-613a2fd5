@@ -4,6 +4,7 @@ import heroBgDesktop from "@/assets/bg-1-obrigado-vendas-advia.webp";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
 import logoNiu from "@/assets/logo-niu.png";
 import { usePageMeta } from "@/lib/page-meta";
+import { buildCheckoutUrl } from "@/lib/checkout-url";
 
 const CHECKOUT_URL = "https://pay.kiwify.com.br/sgL2spg";
 const YT_EMBED = "https://www.youtube.com/embed/4l3emCfzdu0";
@@ -91,7 +92,7 @@ export default function AdvIaReplayPage() {
             <em className="text-[oklch(0.93_0.05_245)]">perder mais tempo</em>
           </h2>
           <a
-            href={CHECKOUT_URL}
+            href={buildCheckoutUrl(CHECKOUT_URL)}
             target="_blank"
             rel="noopener noreferrer"
             className="group mt-8 inline-flex w-full max-w-xl items-center justify-center gap-2 rounded-lg bg-accent-gradient px-7 py-5 text-base font-bold uppercase tracking-wider text-white shadow-glow transition-transform hover:-translate-y-0.5 md:text-lg"
