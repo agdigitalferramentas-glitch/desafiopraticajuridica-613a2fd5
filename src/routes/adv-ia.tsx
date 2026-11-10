@@ -25,8 +25,9 @@ import logoNiu from "@/assets/logo-niu.png";
 import logoAdvIa from "@/assets/logotipo-advia.svg";
 import { usePageMeta } from "@/lib/page-meta";
 import { buildCheckoutUrl } from "@/lib/checkout-url";
+import CouponCard from "@/components/coupon-card";
 
-const CHECKOUT_URL = "https://pay.kiwify.com.br/sgL2spg";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/sgL2spg?coupon=BLACKDANIU";
 
 // ============ ANIMAÇÕES ============
 const fadeUp = {
@@ -750,6 +751,7 @@ export default function AdvIa() {
               </a>
             </div>
 
+            <CouponCard className="mt-6" />
 
             <p className="mt-6 text-xs leading-relaxed text-white/60">
               Esta condição tem prazo. Quando expirar, o preço volta para R$ 1.997 — sem
