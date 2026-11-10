@@ -5,9 +5,8 @@ import logoAdvIa from "@/assets/logotipo-advia.svg";
 import logoNiu from "@/assets/logo-niu.png";
 import { usePageMeta } from "@/lib/page-meta";
 import { buildCheckoutUrl } from "@/lib/checkout-url";
-import CouponCard from "@/components/coupon-card";
 
-const CHECKOUT_URL = "https://pay.kiwify.com.br/sgL2spg?coupon=BLACKDANIU";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/sgL2spg";
 const YT_EMBED = "https://www.youtube.com/embed/4l3emCfzdu0";
 
 export default function AdvIaReplayPage() {
@@ -101,7 +100,6 @@ export default function AdvIaReplayPage() {
             Quero me inscrever agora
             <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
           </a>
-          <CouponCard className="mt-6 w-full max-w-xl" />
         </div>
 
 
